@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMTBBHY7SZ"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-
 	  gtag('config', 'G-GMTBBHY7SZ');
 	</script>
 	
@@ -15,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aravindh Narayanan | Executive Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -24,15 +22,15 @@
             theme: {
                 extend: {
                     colors: {
-                        // Light mode colors
+					// Light mode colors
                         brandBlue: '#1e3a8a', 
                         accentBlue: '#3b82f6',
-                        // Dark mode specific colors
-                        darkBg: '#131314',     // Main background
-                        darkCard: '#1e1f20',   // Card background
-                        darkAccent: '#8ab4f8', // Soft blue accent for dark mode
-                        darkText: '#e3e3e3',   // Primary text
-                        darkSub: '#c4c7c5',    // Secondary/Subtle text
+					// Dark mode specific colors
+                        darkBg: '#131314',     
+                        darkCard: '#1e1f20',   
+                        darkAccent: '#8ab4f8', 
+                        darkText: '#e3e3e3',   
+                        darkSub: '#c4c7c5',    
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -58,7 +56,6 @@
         }
         .dark .name-header { color: #e3e3e3; }
 
-        /* AGGRESSIVE PRINT OPTIMIZATION */
         @media print {
             .no-print { display: none !important; }
             html, body { 
@@ -80,7 +77,6 @@
             
             .page-break { break-after: page; padding-bottom: 0.2cm; }
 
-            /* Fix Section & Text Colors */
             .name-header { font-size: 18pt !important; margin-bottom: 0.2cm !important; color: #1e3a8a !important; }
             .section-title { 
                 font-size: 11pt !important; 
@@ -96,23 +92,21 @@
                 color: black !important;
             }
 
-            /* FIX FOR PROJECT PORTFOLIO & GRID GAPS */
-            .grid { display: block !important; } /* Stacks columns for cleaner print */
+            .grid { display: block !important; } 
             
             .grid > div, .border { 
                 background: white !important; 
                 color: black !important;
-                border: 0.5pt solid #e2e8f0 !important; /* Light visible border */
-                margin-bottom: 0.4cm !important; /* Forces a gap between project boxes */
+                border: 0.5pt solid #e2e8f0 !important;
+                margin-bottom: 0.4cm !important; 
                 padding: 10px !important;
-                page-break-inside: avoid; /* Prevents a project from splitting across pages */
+                page-break-inside: avoid; 
             }
 
             .dark .resume-page, .dark .grid > div, .dark .border { 
                 background: white !important; 
                 color: black !important; 
             }
-            
             /* Remove specific dark mode overrides for print */
             .dark .section-title { border-bottom-color: #1e3a8a !important; }
             .dark .name-header, .dark h2, .dark h3, .dark h4 { color: #1e3a8a !important; }
@@ -128,11 +122,11 @@
 <body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-darkText antialiased p-4 md:p-8">
 
     <div class="fixed top-4 right-4 flex gap-2 no-print z-50">
-        <button onclick="toggleTheme()" class="p-2 bg-white dark:bg-darkCard rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300" title="Toggle Theme">
+        <button id="theme-toggle-btn" onclick="toggleTheme()" class="p-2 bg-white dark:bg-darkCard rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300" title="Toggle Theme">
             <i id="theme-icon" class="fas fa-moon text-brandBlue dark:text-darkAccent"></i>
         </button>
 		
-		<button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-darkCard text-brandBlue dark:text-darkAccent rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300 transition">
+		<button id="print-btn" onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-darkCard text-brandBlue dark:text-darkAccent rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300 transition">
             <i class="fas fa-print"></i> <span class="text-sm font-semibold">Print</span>
         </button>
 
@@ -387,47 +381,30 @@
             </div>
         </section>
     </div>
-	<! --
-	<div id="thank-you-popup" class="fixed bottom-6 right-6 max-w-sm bg-white dark:bg-darkCard border border-gray-200 dark:border-[#444746] shadow-2xl rounded-2xl p-6 transform translate-y-32 opacity-0 transition-all duration-500 z-50 no-print">
+	<div id="thank-you-popup" class="no-print fixed bottom-6 right-6 max-w-sm bg-white dark:bg-darkCard border border-gray-200 dark:border-[#444746] shadow-2xl rounded-2xl p-6 transform translate-y-32 opacity-0 transition-all duration-500 z-50 no-print">
 		<div class="flex items-start gap-4">
-			<div class="bg-brandBlue dark:bg-darkAccent p-2 rounded-full">
+			<div class="bg-brandBlue dark:bg-darkAccent p-2 rounded-full flex-shrink-0">
 				<i class="fas fa-handshake text-white dark:text-darkBg"></i>
 			</div>
 			<div>
 				<h4 class="font-bold text-brandBlue dark:text-white text-sm mb-1">Thank you for visiting!</h4>
 				<p class="font-bold text-xs text-gray-600 dark:text-darkSub leading-relaxed">
-					I appreciate your time reviewing my profile. Please feel free to reach out directly if you'd like to discuss how I can lead your next strategic initiative.
+					I appreciate your time. Please feel free to reach out directly if you'd like to discuss potential leadership opportunities.
 				</p>
-				<button onclick="closePopup()" class="mt-3 text-xs font-bold uppercase tracking-wider text-accentBlue dark:text-darkAccent hover:underline">
-					Close
-				</button>
+				<div class="mt-4 flex gap-3 items-center">
+					<a id="send-message-btn" 
+					   href="mailto:avdnanjp@gmail.com?subject=Strategic Inquiry: Executive Profile Review&body=Hello Aravindh,%0D%0A%0D%0AI have reviewed your profile on your GitHub page. I would like to schedule a brief conversation to discuss how your expertise in PMO Leadership and Digital Transformation could align with our current strategic initiatives.%0D%0A%0D%0ABest regards," 
+					   class="text-xs font-bold uppercase tracking-wider bg-brandBlue dark:bg-darkAccent text-white dark:text-darkBg px-4 py-2 rounded-lg hover:opacity-80 transition">
+						<i class="fas fa-paper-plane mr-1"></i> Send Message
+					</a>
+					
+					<button onclick="closePopup()" class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition">
+						Dismiss
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
-	-->
-	<div id="thank-you-popup" class="fixed bottom-6 right-6 max-w-sm bg-white dark:bg-darkCard border border-gray-200 dark:border-[#444746] shadow-2xl rounded-2xl p-6 transform translate-y-32 opacity-0 transition-all duration-500 z-50 no-print">
-    <div class="flex items-start gap-4">
-        <div class="bg-brandBlue dark:bg-darkAccent p-2 rounded-full flex-shrink-0">
-            <i class="fas fa-handshake text-white dark:text-darkBg"></i>
-        </div>
-        <div>
-            <h4 class="font-bold text-brandBlue dark:text-white text-sm mb-1">Thank you for visiting!</h4>
-            <p class="font-bold text-xs text-gray-600 dark:text-darkSub leading-relaxed">
-                I appreciate your time reviewing my profile. Please feel free to reach out directly if you'd like to discuss potential leadership opportunities.
-            </p>
-            <div class="mt-4 flex gap-4 items-center">
-                <a href="mailto:avdnanjp@gmail.com?subject=Inquiry regarding your Executive Profile&body=Hello Aravindh,%0D%0A%0D%0AI reviewed your profile on your GitHub page and would like to connect to discuss..." 
-                   class="text-xs font-bold uppercase tracking-wider bg-brandBlue dark:bg-darkAccent text-white dark:text-darkBg px-3 py-2 rounded-lg hover:opacity-90 transition">
-                    <i class="fas fa-paper-plane mr-1"></i> Send Message
-                </a>
-                
-                <button onclick="closePopup()" class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition">
-                    Dismiss
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 
     <footer class="text-center py-8 text-gray-500 text-xs uppercase tracking-widest no-print dark:text-darkSub">
         Aravindh Narayanan &copy; 2026 | Tokyo, Japan
@@ -448,30 +425,60 @@
             }
         }
 
-		// Script to track PDF Download
-        document.getElementById('download-btn').addEventListener('click', function() {
-          gtag('event', 'download', {
-            'event_category': 'Engagement',
-            'event_label': 'Resume PDF Download'
-          });
+		// GOOGLE ANALYTICS EVENT TRACKING
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Download Button
+            const downloadBtn = document.getElementById('download-btn');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function() {
+                    gtag('event', 'download_pdf', { 'event_category': 'engagement', 'event_label': 'Resume Download' });
+                });
+            }
+
+            // 2. Print Button
+            const printBtn = document.getElementById('print-btn');
+            if (printBtn) {
+                printBtn.addEventListener('click', function() {
+                    gtag('event', 'print_page', { 'event_category': 'engagement', 'event_label': 'Resume Print' });
+                });
+            }
+
+            // 3. Theme Toggle Button
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            if (themeBtn) {
+                themeBtn.addEventListener('click', function() {
+                    gtag('event', 'toggle_theme', { 'event_category': 'interface', 'event_label': 'Dark/Light Mode Toggle' });
+                });
+            }
+
+            // 4. Send Message Button (in Popup)
+            const messageBtn = document.getElementById('send-message-btn');
+            if (messageBtn) {
+                messageBtn.addEventListener('click', function() {
+                    gtag('event', 'send_message_click', { 'event_category': 'contact', 'event_label': 'Send Message Popup' });
+                });
+            }
         });
 		
 		// Function to show the popup after 2 seconds
-window.onload = function() {
-    setTimeout(function() {
-        const popup = document.getElementById('thank-you-popup');
-        popup.classList.remove('translate-y-32', 'opacity-0');
-        popup.classList.add('translate-y-0', 'opacity-100');
-    }, 2000); // 2000ms = 2 seconds
-};
+        window.onload = function() {
+            setTimeout(function() {
+                const popup = document.getElementById('thank-you-popup');
+                if (popup) {
+                    popup.classList.remove('translate-y-32', 'opacity-0');
+                    popup.classList.add('translate-y-0', 'opacity-100');
+                }
+            }, 2000);
+        };
 
-// Function to close the popup
-function closePopup() {
-    const popup = document.getElementById('thank-you-popup');
-    popup.classList.add('opacity-0');
-    setTimeout(() => popup.remove(), 500);
-}
-
+        // Function to close the popup
+        function closePopup() {
+            const popup = document.getElementById('thank-you-popup');
+            if (popup) {
+                popup.classList.add('opacity-0');
+                setTimeout(() => popup.remove(), 500);
+            }
+        }
     </script>
 </body>
 </html>
