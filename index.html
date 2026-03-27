@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMTBBHY7SZ"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-GMTBBHY7SZ');
-	</script>
-	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMTBBHY7SZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GMTBBHY7SZ');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aravindh Narayanan | Executive Profile</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,42 +24,39 @@
             theme: {
                 extend: {
                     colors: {
-					// Light mode colors
                         brandBlue: '#1e3a8a', 
                         accentBlue: '#3b82f6',
-					// Dark mode specific colors
                         darkBg: '#131314',     
                         darkCard: '#1e1f20',   
                         darkAccent: '#8ab4f8', 
                         darkText: '#e3e3e3',   
                         darkSub: '#c4c7c5',    
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                 }
             }
         }
     </script>
+
     <style>
+        /* --- GLOBAL TRANSITIONS --- */
         body { transition: background-color 0.3s, color 0.3s; }
         .resume-page { max-width: 900px; margin: 0 auto; }
+
+        /* --- UI COMPONENTS --- */
         .section-title { border-bottom: 2px solid #1e3a8a; }
         .dark .section-title { border-bottom-color: #444746; } 
-        
-        .cert-logo { height: 32px; filter: grayscale(0%); transition: filter 0.3s; opacity: 1.0; }
-        .dark .cert-logo { filter: grayscale(0%) invert(0); opacity: 1.0; }
         
         .name-header {
             font-family: 'Lora', serif;
             font-weight: 500; 
             letter-spacing: 0.10em; 
-            text-transform: none;
         }
-        .dark .name-header { color: #e3e3e3; }
 
+        /* --- AGGRESSIVE PRINT OPTIMIZATION --- */
         @media print {
             .no-print { display: none !important; }
+            
             html, body { 
                 background: white !important; 
                 color: black !important; 
@@ -65,6 +64,7 @@
                 padding: 0 !important;
                 zoom: 88% !important;
             }
+
             .resume-page { 
                 box-shadow: none !important; 
                 border: none !important; 
@@ -77,6 +77,7 @@
             
             .page-break { break-after: page; padding-bottom: 0.2cm; }
 
+            /* TYPOGRAPHY CALIBRATION FOR PRINT */
             .name-header { font-size: 18pt !important; margin-bottom: 0.2cm !important; color: #1e3a8a !important; }
             .section-title { 
                 font-size: 11pt !important; 
@@ -86,51 +87,73 @@
                 color: #1e3a8a !important;
             }
             h3, h4 { font-size: 9.5pt !important; color: #1e3a8a !important; margin-bottom: 2px !important; }
-            p, li, span, div { 
-                font-size: 9.5pt !important; 
-                line-height: 1.1 !important; 
-                color: black !important;
+            p, li, span, div { font-size: 9.5pt !important; line-height: 1.1 !important; color: black !important; }
+
+            /* UN-BOXING COMPETENCIES & CERTS */
+            .certs-container, .competencies-container, .certs-container div, .competencies-container div {
+                border: none !important;
+                background: transparent !important;
+                padding: 0 !important;
+                margin-bottom: 2px !important;
+                box-shadow: none !important;
             }
 
-            .grid { display: block !important; } 
+            .certs-container, .competencies-container {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                column-gap: 1cm !important;
+            }
+
+            /* PORTFOLIO LIST VIEW (PRINTER FRIENDLY) */
+            .project-grid { display: block !important; } 
             
-            .grid > div, .border { 
-                background: white !important; 
-                color: black !important;
-                border: 0.5pt solid #e2e8f0 !important;
-                margin-bottom: 0.4cm !important; 
-                padding: 10px !important;
-                page-break-inside: avoid; 
+            .project-card {
+                border: none !important;
+                border-top: 0.5pt solid #e2e8f0 !important;
+                background: transparent !important;
+                padding: 8px 0 !important;
+                margin-bottom: 4px !important;
+                page-break-inside: avoid !important;
+                display: block !important;
+                width: 100% !important;
             }
 
-            .dark .resume-page, .dark .grid > div, .dark .border { 
-                background: white !important; 
-                color: black !important; 
+            .meta-bar {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: flex-start !important;
+                gap: 15px !important;
+                border: none !important;
+                margin-bottom: 2px !important;
+                padding-bottom: 0 !important;
+                font-size: 8.5pt !important;
+                color: #666 !important;
             }
-            /* Remove specific dark mode overrides for print */
+            .meta-bar span { display: none; }
+
+            /* DARK MODE OVERRIDES (FORCE WHITE PRINT) */
+            .dark .resume-page, .dark .grid > div, .dark .border { background: white !important; color: black !important; }
             .dark .section-title { border-bottom-color: #1e3a8a !important; }
             .dark .name-header, .dark h2, .dark h3, .dark h4 { color: #1e3a8a !important; }
             .dark p, .dark li, .dark span, .dark div, .dark strong { color: black !important; }
-
-            .mb-8, .mb-6 { margin-bottom: 0.3cm !important; }
-            .cert-logo { height: 24px !important; filter: none !important; opacity: 1 !important; }
 
             @page { margin: 1.1cm 1.4cm; }
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-darkText antialiased p-4 md:p-8">
 
     <div class="fixed top-4 right-4 flex gap-2 no-print z-50">
         <button id="theme-toggle-btn" onclick="toggleTheme()" class="p-2 bg-white dark:bg-darkCard rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300" title="Toggle Theme">
             <i id="theme-icon" class="fas fa-moon text-brandBlue dark:text-darkAccent"></i>
         </button>
-		
-		<button id="print-btn" onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-darkCard text-brandBlue dark:text-darkAccent rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300 transition">
+        
+        <button id="print-btn" onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-darkCard text-brandBlue dark:text-darkAccent rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300 transition">
             <i class="fas fa-print"></i> <span class="text-sm font-semibold">Print</span>
         </button>
 
-		<a id="download-btn" href="Aravindh_Narayanan_Executive_Profile.pdf" download class="flex items-center gap-2 px-4 py-2 bg-brandBlue text-white dark:bg-darkAccent dark:text-darkBg rounded-full shadow-lg hover:bg-blue-800 transition">
+        <a id="download-btn" href="Aravindh_Narayanan_Executive_Profile.pdf" download class="flex items-center gap-2 px-4 py-2 bg-brandBlue text-white dark:bg-darkAccent dark:text-darkBg rounded-full shadow-lg hover:bg-blue-800 transition">
             <i class="fas fa-download"></i> <span class="text-sm font-semibold">Download PDF</span>
         </a>
     </div>
@@ -138,40 +161,71 @@
     <div class="resume-page bg-white dark:bg-darkCard shadow-2xl p-8 md:p-12 rounded-sm border-t-8 border-brandBlue dark:border-darkAccent">
         
         <header class="text-center mb-8">
-			<h1 class="name-header font-semibold text-4xl text-brandBlue uppercase mb-4">ARAVINDH NARAYANAN</h1>
-            <div class="flex flex-wrap justify-center gap-4 mb-4">
-                <img src="cert-logo.png" alt="Certifications Logo" class="cert-logo">
-            </div>
+            <h1 class="name-header font-semibold text-4xl text-brandBlue uppercase mb-4">ARAVINDH NARAYANAN</h1>
             <div class="flex flex-wrap justify-center gap-4 text-sm mb-4">
-                <a href="mailto:avdnanjp@gmail.com?Subject=From your github page" class="hover:text-accentBlue dark:hover:text-white"><i class="fas fa-envelope text-accentBlue dark:text-darkAccent mr-1"></i> avdnanjp@gmail.com</a>
+                <a href="mailto:avdnanjp@gmail.com?subject=Message about your GitHub Profile&body=Hello Aravindh," class="hover:text-accentBlue dark:hover:text-white">
+                    <i class="fas fa-envelope text-accentBlue dark:text-darkAccent mr-1"></i> avdnanjp@gmail.com
+                </a>
                 <span><i class="fas fa-map-marker-alt text-accentBlue dark:text-darkAccent mr-1"></i> Tokyo, Japan</span>
-                <a href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" class="hover:text-accentBlue dark:hover:text-white"><i class="fab fa-linkedin text-accentBlue dark:text-darkAccent mr-1"></i> LinkedIn Profile</a>
+                <a href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" class="hover:text-accentBlue dark:hover:text-white">
+                    <i class="fab fa-linkedin text-accentBlue dark:text-darkAccent mr-1"></i> LinkedIn Profile
+                </a>
             </div>
         </header>
 
         <section class="mb-8">
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Executive Summary</h2>
             <ul class="space-y-2 list-none text-sm text-justify dark:text-darkSub">
-                <li class="flex gap-2"><span>✓</span> PMO Director and Senior Program Manager with 15+ years of architecting and spearheading multi-million-dollar Digital Transformation and Cloud Migration initiatives for global enterprises, primarily in Japan</li>
-                <li class="flex gap-2"><span>✓</span> Successfully delivered multiple major enterprise applications, some of which generating a combined 32M+ JPY YOY (approx. $240K USD) in annual profit/expense reduction for Rakuten Corporate IT.</li>
-                <li class="flex gap-2"><span>✓</span> Directed a $25M cloud migration program for a major insurance tech platform, delivering an ROI exceeding 8% through capital expense reduction and achieving comprehensive client satisfaction.</li>
-                <li class="flex gap-2"><span>✓</span> Established a high-performing technology team at Wells Fargo and devised an automation solution that reduced time consumption by over 85% while maintaining a 90% accuracy rate.</li>
-                <li class="flex gap-2"><span>✓</span> Co-founded an ERP product start-up for the logistics industry, revolutionizing the local market by leveraging a new licensing model to drive a 15% increase in revenue and 28% increase in customer satisfaction, with a 2x faster turnaround time, demonstrating full-cycle business ownership.</li>
+                <li class="flex gap-2"><span>✔</span> PMO Director and Strategic lead with 15+ years of architecting and spearheading multi-million-dollar Digital Transformation and Cloud Migration initiatives for global enterprise leaders in Japan</li>
+                <li class="flex gap-2"><span>✔</span> Established an Enterprise PMO Center of Excellence (CoE) at Renesas Electronics, institutionalizing governance frameworks and operational excellence to drive delivery maturity across complex M&A integrations.</li>
+                <li class="flex gap-2"><span>✔</span> Directed a portfolio of high-concurrency enterprise applications at Rakuten, managing 8,000+ users with &lt;150ms latency and delivering ¥32M+ in annual profit through strategic infrastructure optimization.</li>
+                <li class="flex gap-2"><span>✔</span> Led a $25M Digital Transformation Program for a major insurance tech platform, delivering an ROI exceeding 8% and achieving comprehensive client satisfaction through end-to-end AWS cloud architecture.</li>
+                <li class="flex gap-2"><span>✔</span> Co-founded a high-growth ERP start-up, driving a 15% increase in revenue and 2x faster turnaround time through strategic product ownership and a keen focus on customer-centric business models.</li>
             </ul>
         </section>
+        
+        <section class="mb-8">
+            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Core Competencies / Skills</h2>
+            <div class="competencies-container grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-justify dark:text-darkSub">
+                <div>
+                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
+                        <i class="fas fa-chess-knight"></i> Strategic Leadership:
+                    </h4>
+                    <p>PMO Center of Excellence Establishment, M&A Integration Governance & Strategy, Operational Excellence, Executive Stakeholder Engagement, Governance Frameworks, JAPAC Market Strategy.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
+                        <i class="fas fa-microchip"></i> Technical Program Management:
+                    </h4>
+                    <p>Large-Scale Cloud Migration (AWS/Hybrid), Infrastructure Scalability, Portfolio Risk & Dependency Management, End-to-End Delivery Lifecycle, Saas/PaaS Governance.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
+                        <i class="fas fa-rocket"></i> Digital Transformation:
+                    </h4>
+                    <p>Enterprise Application Architecture, High-Concurrency systems (&lt;150ms Latency), Data-Driven Performance Optimization, Global Service Delivery, Systems Interoperability.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
+                        <i class="fas fa-chart-line"></i> Operational Maturity:
+                    </h4>
+                    <p>Agile/Hybrid Methodologies, Process Innovation & Automation, Budgetary Oversight ($25M+), ROI & Value Realization, Cross-Functional Team Leadership.</p>
+                </div>
+            </div>
+        </section>
 
-        <section class="mb-8 page-break">
+        <section class="mb-8">
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-6 pb-1 uppercase tracking-wider">Experience</h2>
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Senior Manager / PMO Director</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Jan 2025 to Present</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Jan 2025 to Present</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Renesas Electronics Corporation, Tokyo, Japan</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
                     <li>Architected and led the establishment of a PMO Center of Excellence (CoE), institutionalizing a comprehensive enterprise-wide project management framework that directly drove organizational delivery maturity and consistency across complex programs, including M&A integrations.</li>
-                    <li>Defined strategic objectives and executed the organizational restructuring necessary to build the PMO from ground up, aligning delivery teams with the new enterprise landscape.</li>
-                    <li>Directed end-to-end IT project management for complex initiatives including M&A integrations, ensuring seamless system transitions, on-time delivery, and strong business alignment.</li>
+                    <li>Served as a strategic partner to senior leadership, ensuring large-scale technology programs remained aligned with global business objectives and compliance standards.</li>
+                    <li>Directed end-to-end IT project management for complex M&A integrations, ensuring seamless system transitions, on-time delivery, and strong business alignment post-acquisition.</li>
                     <li>Developed and executed strategic plans, managed cross-functional teams, and maintained strong stakeholder engagement to deliver programs & projects on-time and within budget.</li>
                 </ul>
             </div>
@@ -179,12 +233,13 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Senior Program Manager (PMO & Project Design)</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Aug 2020 to Dec 2024</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Aug 2020 to Dec 2024</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Rakuten Group Inc, Tokyo, Japan</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Led a distributed team of Product Managers and tech experts for Rakuten's Corporate IT; managed a portfolio of Enterprise application products and owned strategic initiatives aligned with organizational goals.</li>
-                    <li>Directed the full project lifecycle (Plan, Organize, Direct, Control and Evaluate) for in-house development projects and information systems.</li>
+                    <li>Directed the full project lifecycle for a portfolio of mission-critical enterprise applications supporting 8,000+ concurrent users, resulting in 32M+ JPY in annual profit via infrastructure optimizations.</li>
+                    <li>Owned the execution strategy for high-visibility programs, from conceptual business case development through global deployment and performance tracking.</li>
+                    <li>Managed a distributed team of Product Managers and technical experts, ensuring delivery excellence within an Agile/Hybrid framework.</li>
                     <li>Successfully launched 3 major capitalizable enterprise applications for 8000+ concurrent users with &lt;150ms latency, resulting in a 5.2mn JPY YoY and another 27.12mn JPY profit via expense reduction.</li>
                 </ul>
             </div>
@@ -192,12 +247,12 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Senior Manager - Technology (IT Strategy & Service Delivery)</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Nov 2018 to Jun 2020</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2018 to Jun 2020</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies Japan K.K, Tokyo, Japan | Client: Asurion Japan</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Led a $25M Digital Transformation / Cloud Migration Program for the insurance tech platform of two major Japanese telecom operators, managing a distributed, cross-functional team of tech experts.</li>
-                    <li>Served as a Chief of Service Delivery, outlining the strategic plan and controlling budget, resources, and deliverables to ensure all program objectives were met.</li>
+                    <li>Led a ¥25M Digital Transformation and Cloud Migration Program for a major insurance tech platform, delivering an ROI exceeding 8% through capital expense reduction.</li>
+                    <li>Functioned as a Chief of Service Delivery, outlining the strategic plans and controlling budgets/resources for a 30+ member global team.</li>
                     <li>Delivered key projects, including the development of a web-based insurance claims system and comprehensive data migration, utilizing end-to-end AWS architecture and DevOps infrastructure management.</li>
                 </ul>
             </div>
@@ -205,7 +260,7 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Manager - Technology (Product Portfolio Management)</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Oct 2018</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Oct 2018</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies India Pvt. Ltd, Bengaluru, India | Client: Wells Fargo</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
@@ -217,7 +272,7 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Director | Co-Founder</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Apr 2015 to Oct 2017</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Apr 2015 to Oct 2017</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Y2K2 Content Management Solutions Pvt. Ltd, Chennai, India</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
@@ -230,7 +285,7 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Entrepreneurial Activities</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Mar 2011 to Mar 2015</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Mar 2011 to Mar 2015</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Independent Consultant, Chennai, India</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
@@ -241,7 +296,7 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Database Administrator</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Oct 2010 to Dec 2010</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Oct 2010 to Dec 2010</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Meritech Co., Ltd, Tokyo, Japan | Client: Nokia Siemens Networks</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
@@ -252,7 +307,7 @@
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Senior Technical Support Executive</h3>
-                    <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Jun 2005 to Aug 2006</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Jun 2005 to Aug 2006</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Sutherland Global Services, Chennai, India | Client: Microsoft Corporation</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
@@ -261,43 +316,48 @@
             </div>
         </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <section>
-                <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Skills & Expertise</h2>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2">
-                            <i class="fas fa-chess-knight"></i> Executive & Strategy:
-                        </h4>
-                        <p class="mt-1 text-justify dark:text-darkSub">PMO Leadership & Center of Excellence (CoE) Establishment, Digital Transformation, Strategy Planning & Execution, M&A Integrations, Global Service Delivery, Entrepreneurship.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2">
-                            <i class="fas fa-microchip"></i> Program & Technical:
-                        </h4>
-                        <p class="mt-1 text-justify dark:text-darkSub">Enterprise Portfolio & Program Management (ICT), Agile/Hybrid Methodologies, Large-Scale Cloud Migration (AWS), Enterprise Application Integration, Stakeholder Management, IT Governance.</p>
-                    </div>
+        <section class="mb-8">
+            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-3 pb-1 uppercase tracking-wider">Certifications & Credentials</h2>
+            <div class="certs-container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-1 text-sm dark:text-darkSub">
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">PMP® <span class="font-normal text-gray-500 dark:text-gray-400">| Project Management Professional</span></span>
                 </div>
-            </section>
-
-            <section>
-                <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Certifications</h2>
-				<p class="text-sm font-semibold text-gray-600 dark:text-darkAccent mb-1 ">
-				PMP® | PRINCE2® | ITIL® | ASM® | 6σ® | UiPath® | MCP® </p>
-                <ul class="text-sm space-y-1 dark:text-darkSub border-t border-gray-100 dark:border-[#444746] pt-4">
-                    <li class="font-bold"><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>PMP® Project Management Professional</li>
-                    <li class="font-bold"><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>PRINCE2® Foundation Certificate</li>
-                    <li class="font-bold"><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>Agile Scrum Master (ASM®)</li>
-                    <li class="font-bold"><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>ITIL v3 Foundation Certificate</li>
-                    <li><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>Six Sigma Green Belt®</li>
-                    <li><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>Certified Marketing Strategy Associate (SCMS-A)</li>
-					<li><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>Digital Marketing Associate (SCDM-A)</li>
-                    <li><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>RPA Developer (UiPath®)</li>
-                    <li><i class="fas fa-award text-brandBlue dark:text-darkAccent mr-2"></i>Microsoft Certified Professional®</li>
-                </ul>
-            </section>
-        </div>
-
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">PRINCE2® <span class="font-normal text-gray-500 dark:text-gray-400">| Foundation Certificate</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">ASM® <span class="font-normal text-gray-500 dark:text-gray-400">| Agile Scrum Master</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">ITIL® v3 <span class="font-normal text-gray-500 dark:text-gray-400">| Foundation Certificate</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">6σ® <span class="font-normal text-gray-500 dark:text-gray-400">| Six Sigma Green Belt</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">SCMS-A <span class="font-normal text-gray-500 dark:text-gray-400">| Marketing Strategy</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">SCDM-A <span class="font-normal text-gray-500 dark:text-gray-400">| Digital Marketing</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">UiPath® <span class="font-normal text-gray-500 dark:text-gray-400">| RPA Developer</span></span>
+                </div>
+                <div class="cert-item flex items-center gap-2">
+                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
+                    <span class="font-semibold">MCP® <span class="font-normal text-gray-500 dark:text-gray-400">| Microsoft Certified Professional</span></span>
+                </div>
+            </div>
+        </section>
+        
         <section class="mb-8">
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Education</h2>
             <div class="flex justify-between items-baseline">
@@ -305,112 +365,110 @@
                     <h3 class="font-bold dark:text-white text-sm">Master of Science (M.S)</h3>
                     <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Waseda University | Tokyo, Japan | Major: Global Information and Telecommunication Studies</p>
                 </div>
-                <span class="text-sm font-semibold text-gray-500 dark:text-darkSub">Apr 2008 to Sep 2010</span>
+                <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Apr 2008 to Sep 2010</span>
             </div>
-            <p class="text-sm mt-2 italic text-gray-600 dark:text-darkSub text-justify">Authored and presented a technical paper on 'A Novel Approach to Data Collection using CDMA in Under Water Wireless Acoustic Sensor Networks (UWASN) at IEICE International Conference at Osaka Prefecture University, Japan.</p>
+            <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
+                <li>Authored and presented a technical paper at IEICE International Conference at Osaka Prefecture University, Japan.</li>
+            </ul>
         </section>
 
         <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Awards & Honors</h2>
+            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Professional Leadership & Recognition</h2>
             <ul class="text-sm space-y-2 dark:text-darkSub">
                 <li class="flex items-start gap-2">
-                    <i class="fas fa-trophy text-yellow-500 mt-1"></i>
+                    <i class="fas fa-trophy text-brandBlue dark:text-darkAccent mt-1"></i>
                     <span><strong>Chief Guest for a National Conference (2016):</strong> Invited to deliver keynote at R.M.K Engineering College.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                    <i class="fas fa-star text-yellow-500 mt-1"></i>
-                    <span><strong>'Distinguished Alumnus of the IT Department' Award (2015):</strong> Awarded for professional success by R.M.K Engineering College.</span>
+                    <i class="fas fa-star text-brandBlue dark:text-darkAccent mt-1"></i>
+                    <span><strong>'Distinguished Alumnus of the IT Department' Award (2015):</strong> Awarded for professional success and contributions to the field by R.M.K Engineering College.</span>
                 </li>
             </ul>
         </section>
         
         <section class="mb-8">
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-6 pb-1 uppercase tracking-wider">Key Project Portfolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
+            <div class="project-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
                     <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-leaf"></i> Project: Energy Tracker
+                        <i class="fas fa-leaf"></i> Energy Tracker | ESG Platform
                     </h4>
-                    <div class="text-[12px] space-y-1 mb-3 dark:text-darkSub">
+                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
                         <p><strong>Org:</strong> Rakuten Group Inc. | <strong>Method:</strong> Hybrid</p>
-                        <p><strong>Budget:</strong> Up to $1Million | <strong>Team:</strong> 5 to 9</p>
-                        <p><strong>Duration:</strong> July, 2022 to February 2023</p>
+                        <p><strong>Budget:</strong> Up to ¥10Million+ | <strong>Team:</strong> 5 to 9</p>
+                        <p><strong>Duration:</strong> Jul 2022 to Feb 2023</p>
                     </div>
-                    <p class="text-xs italic mb-2 text-justify dark:text-darkSub"><strong>Objective:</strong> Develop and deploy a data-driven application to manage and reduce energy consumption across facilities.</p>
-                    <p class="text-xs text-justify dark:text-darkSub">Led end-to-end development, enabling stakeholders to calculate energy use, analyze data via filters, and generate reports for sustainability goals. Directed an 8-10 million JPY budget with a cross-functional team.</p>
+                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Developed a data-driven platform to centralize global energy consumption management for sustainability reporting for all Rakuten facilities.</p>
+                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Enabled real-time calculation and filtering of energy data, directly supporting <strong>Corporate ESG and sustainability goals</strong>.</p>
                 </div>
 
-                <div class="border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
+                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
                     <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-building"></i> Project: Space Studio
+                        <i class="fas fa-building"></i> SpaceStudio | Facility Management
                     </h4>
-                    <div class="text-[12px] space-y-1 mb-3 dark:text-darkSub">
+                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
                         <p><strong>Org:</strong> Rakuten Group Inc. | <strong>Method:</strong> Agile</p>
-                        <p><strong>Budget:</strong> $15Million to $25Million | <strong>Team:</strong> 10 to 14</p>
-                        <p><strong>Duration:</strong> August, 2021 to August, 2022</p>
+                        <p><strong>Budget:</strong> ¥20Million+ | <strong>Team:</strong> 10 to 14</p>
+                        <p><strong>Duration:</strong> Aug 2021 to Aug 2022</p>
                     </div>
-                    <p class="text-xs italic mb-2 text-justify dark:text-darkSub"><strong>Objective:</strong> Facility management system replacing high-cost third-party tools with a custom 2D layout booking system.</p>
-                    <p class="text-xs text-justify dark:text-darkSub">Eliminated 3rd party licenses saving 31.78 million JPY. Managed delivery of Phase 1 with 10-14 professionals. System handles 8,000+ concurrent user logins.</p>
+                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Engineered a proprietary 2D layout booking system to replace high-cost third-party facility management tools across global offices.</p>
+                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Eliminated 3rd party licenses, saving <strong>¥31.78M annually</strong>. Scaled to handle 8,000+ concurrent users with high availability.</p>
                 </div>
 
-                <div class="border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
+                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
                     <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-calendar-check"></i> Project: EnrollMe
+                        <i class="fas fa-calendar-check"></i> EnrollMe | Event Management Automation
                     </h4>
-                    <div class="text-[12px] space-y-1 mb-3 dark:text-darkSub">
+                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
                         <p><strong>Org:</strong> Rakuten Group Inc. | <strong>Method:</strong> Agile</p>
-                        <p><strong>Budget:</strong> Up to $1Million | <strong>Team:</strong> 5 to 9</p>
-                        <p><strong>Duration:</strong> December, 2020 to November, 2021</p>
+                        <p><strong>Budget:</strong> ¥10Million+ | <strong>Team:</strong> 5 to 9</p>
+                        <p><strong>Duration:</strong> Dec 2020 to Nov 2021</p>
                     </div>
-                    <p class="text-xs italic mb-2 text-justify dark:text-darkSub"><strong>Objective:</strong> Covid-19 vaccination and company health event management system.</p>
-                    <p class="text-xs text-justify dark:text-darkSub">Reduced event creation time from 5.5 days to 30 minutes. Earned direct profit of 217,333 JPY per event and projected annual cost reduction of 5.2M JPY.</p>
+                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Developed a custom COVID-19 vaccination and corporate health event management system to automate manual scheduling.</p>
+                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Reduced event creation time from 5.5 days to <strong>30 minutes</strong>. Earning a direct profit of ¥217K/entity while generating a projected annual cost reduction of ¥5.2M.</p>
                 </div>
 
-                <div class="border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
+                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
                     <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-cloud"></i> Project: Horizon
+                        <i class="fas fa-cloud"></i> Horizon | Cloud Transformation
                     </h4>
-                    <div class="text-[12px] space-y-1 mb-3 dark:text-darkSub">
+                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
                         <p><strong>Org:</strong> Synechron Japan | <strong>Method:</strong> Hybrid</p>
-                        <p><strong>Budget:</strong> $25Million or More | <strong>Team:</strong> 30+</p>
-                        <p><strong>Duration:</strong> January, 2019 to June, 2020</p>
+                        <p><strong>Budget:</strong> $25Million+ | <strong>Team:</strong> 30+ Global</p>
+                        <p><strong>Duration:</strong> Jan 2019 to Jun 2020</p>
                     </div>
-                    <p class="text-xs italic mb-2 text-justify dark:text-darkSub"><strong>Objective:</strong> Upgrade legacy system to AWS cloud for Japanese mobile insurance providers.</p>
-                    <p class="text-xs text-justify dark:text-darkSub">Directed $25M budget and 30+ global team members. Cloud-based app handles 3,000+ concurrent user logins.</p>
+                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Directed the legacy-to-cloud migration of an insurance tech platform for two major Japanese mobile telecom operators.</p>
+                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Achieved an <strong>ROI exceeding 8%</strong>. Engineered a cloud-native architecture supporting 3,000+ concurrent user sessions.</p>
                 </div>
             </div>
         </section>
     </div>
-	<div id="thank-you-popup" class="no-print fixed bottom-6 right-6 max-w-sm bg-white dark:bg-darkCard border border-gray-200 dark:border-[#444746] shadow-2xl rounded-2xl p-6 transform translate-y-32 opacity-0 transition-all duration-500 z-50 no-print">
-		<div class="flex items-start gap-4">
-			<div class="bg-brandBlue dark:bg-darkAccent p-2 rounded-full flex-shrink-0">
-				<i class="fas fa-handshake text-white dark:text-darkBg"></i>
-			</div>
-			<div>
-				<h4 class="font-bold text-brandBlue dark:text-white text-sm mb-1">Thank you for visiting!</h4>
-				<p class="font-bold text-xs text-gray-600 dark:text-darkSub leading-relaxed">
-					I appreciate your time. Please feel free to reach out directly if you'd like to discuss potential leadership opportunities.
-				</p>
-				<div class="mt-4 flex gap-3 items-center">
-					<a id="send-message-btn" 
-					   href="mailto:avdnanjp@gmail.com?subject=Strategic Inquiry: Executive Profile Review&body=Hello Aravindh,%0D%0A%0D%0AI have reviewed your profile on your GitHub page. I would like to schedule a brief conversation to discuss how your expertise in PMO Leadership and Digital Transformation could align with our current strategic initiatives.%0D%0A%0D%0ABest regards," 
-					   class="text-xs font-bold uppercase tracking-wider bg-brandBlue dark:bg-darkAccent text-white dark:text-darkBg px-4 py-2 rounded-lg hover:opacity-80 transition">
-						<i class="fas fa-paper-plane mr-1"></i> Send Message
-					</a>
-					
-					<button onclick="closePopup()" class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition">
-						Dismiss
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
+    
+    <div id="thank-you-popup" class="no-print fixed bottom-6 right-6 max-w-sm bg-white dark:bg-darkCard border border-gray-200 dark:border-[#444746] shadow-2xl rounded-2xl p-6 transform translate-y-32 opacity-0 transition-all duration-500 z-50 no-print">
+        <div class="flex items-start gap-4">
+            <div class="bg-brandBlue dark:bg-darkAccent p-2 rounded-full flex-shrink-0">
+                <i class="fas fa-handshake text-white dark:text-darkBg"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-brandBlue dark:text-darkAccent text-sm mb-2">Thank you for visiting!</h4>
+                <p class="font-bold text-xs text-gray-600 dark:text-darkSub leading-relaxed mb-2">I appreciate your time and interest here.</p>
+                <p class="text-xs font-semibold text-gray-600 dark:text-darkAccent mb-2 ">Please feel free to reach out directly if you'd like to discuss potential leadership opportunities.</p>
+                <div class="mt-4 flex gap-3 items-center">
+                    <a id="send-message-btn" href="mailto:avdnanjp@gmail.com?subject=Strategic Inquiry: Executive Profile Review&body=Hello Aravindh,%0D%0A%0D%0AI have reviewed your profile on your GitHub page. I would like to schedule a brief conversation to discuss how your expertise in PMO Leadership and Digital Transformation could align with our current strategic initiatives.%0D%0A%0D%0ABest regards," class="text-xs font-bold uppercase tracking-wider bg-brandBlue dark:bg-darkAccent text-white dark:text-darkBg px-4 py-2 rounded-lg hover:opacity-80 transition">
+                        <i class="fas fa-paper-plane mr-1"></i> Send Message
+                    </a>
+                    <button onclick="closePopup()" class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="text-center py-8 text-gray-500 text-xs uppercase tracking-widest no-print dark:text-darkSub">
         Aravindh Narayanan &copy; 2026 | Tokyo, Japan
     </footer>
 
     <script>
+        // THEME TOGGLE LOGIC
         function toggleTheme() {
             const html = document.documentElement;
             const icon = document.getElementById('theme-icon');
@@ -425,42 +483,20 @@
             }
         }
 
-		// GOOGLE ANALYTICS EVENT TRACKING
+        // GOOGLE ANALYTICS EVENT TRACKING
         document.addEventListener('DOMContentLoaded', function() {
-            // 1. Download Button
-            const downloadBtn = document.getElementById('download-btn');
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', function() {
-                    gtag('event', 'download_pdf', { 'event_category': 'engagement', 'event_label': 'Resume Download' });
-                });
-            }
+            const trackEvent = (id, name, cat, label) => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('click', () => gtag('event', name, { 'event_category': cat, 'event_label': label }));
+            };
 
-            // 2. Print Button
-            const printBtn = document.getElementById('print-btn');
-            if (printBtn) {
-                printBtn.addEventListener('click', function() {
-                    gtag('event', 'print_page', { 'event_category': 'engagement', 'event_label': 'Resume Print' });
-                });
-            }
-
-            // 3. Theme Toggle Button
-            const themeBtn = document.getElementById('theme-toggle-btn');
-            if (themeBtn) {
-                themeBtn.addEventListener('click', function() {
-                    gtag('event', 'toggle_theme', { 'event_category': 'interface', 'event_label': 'Dark/Light Mode Toggle' });
-                });
-            }
-
-            // 4. Send Message Button (in Popup)
-            const messageBtn = document.getElementById('send-message-btn');
-            if (messageBtn) {
-                messageBtn.addEventListener('click', function() {
-                    gtag('event', 'send_message_click', { 'event_category': 'contact', 'event_label': 'Send Message Popup' });
-                });
-            }
+            trackEvent('download-btn', 'download_pdf', 'engagement', 'Resume Download');
+            trackEvent('print-btn', 'print_page', 'engagement', 'Resume Print');
+            trackEvent('theme-toggle-btn', 'toggle_theme', 'interface', 'Theme Toggle');
+            trackEvent('send-message-btn', 'send_message_click', 'contact', 'Popup Message Sent');
         });
-		
-		// Function to show the popup after 2 seconds
+        
+        // POPUP ANIMATION LOGIC
         window.onload = function() {
             setTimeout(function() {
                 const popup = document.getElementById('thank-you-popup');
@@ -471,7 +507,6 @@
             }, 2000);
         };
 
-        // Function to close the popup
         function closePopup() {
             const popup = document.getElementById('thank-you-popup');
             if (popup) {
