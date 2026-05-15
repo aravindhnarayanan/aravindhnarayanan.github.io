@@ -145,7 +145,7 @@
 <body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-darkText antialiased p-4 md:p-8">
 
     <div class="fixed top-4 right-4 flex gap-2 no-print z-50">
-        <button id="theme-toggle-btn" onclick="toggleTheme()" class="p-2 bg-white dark:bg-darkCard rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300" title="Toggle Theme">
+        <button id="toggle-theme-btn" onclick="toggleTheme()" class="p-2 bg-white dark:bg-darkCard rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300" title="Toggle Theme">
             <i id="theme-icon" class="fas fa-moon text-brandBlue dark:text-darkAccent"></i>
         </button>
         
@@ -158,16 +158,42 @@
         </a>
     </div>
 
-    <div class="resume-page bg-white dark:bg-darkCard shadow-2xl p-8 md:p-12 rounded-sm border-t-8 border-brandBlue dark:border-darkAccent">
+    <section class="no-print min-h-[90vh] flex flex-col justify-center items-center text-center max-w-2xl mx-auto px-4 mb-12 border-b border-gray-200 dark:border-[#444746] pb-12">
+        <h1 class="name-header font-semibold text-4xl md:text-5xl text-brandBlue dark:text-white uppercase mb-2">
+            ARAVINDH NARAYANAN
+        </h1>
+        <p class="text-xs md:text-sm font-semibold uppercase tracking-widest text-accentBlue dark:text-darkAccent mb-8">
+            Director of Strategic PMO & Digital Transformation
+        </p>
+
+        <p class="text-sm md:text-base text-gray-600 dark:text-darkSub leading-relaxed text-justify mb-8 font-light">
+            Specializing in the <strong class="font-semibold text-brandBlue dark:text-white">"Architecture of Execution."</strong> Over 15 years of experience institutionalizing Global PMO Centers of Excellence (CoE), navigating complex M&A infrastructure integrations, and orchestrating multi-million-dollar legacy-to-cloud transformation portfolios across the JAPAC market.
+        </p>
+
+        <div class="grid grid-cols-2 gap-x-6 gap-y-3 max-w-lg mx-auto mb-10 text-left text-[11px] uppercase tracking-wider font-semibold text-gray-500 dark:text-darkSub">
+            <div class="flex items-center gap-2"><i class="fas fa-sitemap text-brandBlue dark:text-darkAccent"></i> Execution Architecture</div>
+            <div class="flex items-center gap-2"><i class="fas fa-cogs text-brandBlue dark:text-darkAccent"></i> Operational Engineering</div>
+            <div class="flex items-center gap-2"><i class="fas fa-cloud text-brandBlue dark:text-darkAccent"></i> Cloud Economics</div>
+            <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-brandBlue dark:text-darkAccent"></i> Systemic Risk Governance</div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
+            <button onclick="scrollToProfile()" class="w-full sm:w-auto px-6 py-3 bg-brandBlue text-white dark:bg-darkAccent dark:text-darkBg font-semibold rounded-lg shadow-md hover:opacity-90 transition flex items-center justify-center gap-2 uppercase text-xs tracking-wider">
+                <i class="fas fa-arrow-down"></i> Scroll to Full Dossier
+            </button>
+        </div>
+    </section>
+
+    <div id="profile-content" class="resume-page bg-white dark:bg-darkCard shadow-2xl p-8 md:p-12 rounded-sm border-t-8 border-brandBlue dark:border-darkAccent">
         
         <header class="text-center mb-8">
             <h1 class="name-header font-semibold text-4xl text-brandBlue dark:text-white uppercase mb-4">ARAVINDH NARAYANAN</h1>
             <div class="flex flex-wrap justify-center gap-4 text-sm mb-4">
-                <a href="mailto:avdnanjp@gmail.com?subject=Message about your GitHub Profile&body=Hello Aravindh," class="hover:text-accentBlue dark:hover:text-white">
+                <a id="header-email-link" href="mailto:avdnanjp@gmail.com?subject=Message about your GitHub Profile&body=Hello Aravindh," class="hover:text-accentBlue dark:hover:text-white">
                     <i class="fas fa-envelope text-accentBlue dark:text-darkAccent mr-1"></i> avdnanjp@gmail.com
                 </a>
                 <span><i class="fas fa-map-marker-alt text-accentBlue dark:text-darkAccent mr-1"></i> Tokyo, Japan</span>
-                <a href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" class="hover:text-accentBlue dark:hover:text-white">
+                <a id="header-linkedin-link" href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" class="hover:text-accentBlue dark:hover:text-white">
                     <i class="fab fa-linkedin text-accentBlue dark:text-darkAccent mr-1"></i> LinkedIn Profile
                 </a>
             </div>
@@ -176,11 +202,11 @@
         <section class="mb-8">
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Executive Summary</h2>
             <ul class="space-y-2 list-none text-sm text-justify dark:text-darkSub">
-                <li class="flex gap-2"><span>✔</span> PMO Director and Strategic lead with 15+ years of architecting and spearheading multi-million-dollar Digital Transformation and Cloud Migration initiatives for global enterprise leaders in Japan</li>
-                <li class="flex gap-2"><span>✔</span> Established an Enterprise PMO Center of Excellence (CoE) at Renesas Electronics, institutionalizing governance frameworks and operational excellence to drive delivery maturity across complex M&A integrations.</li>
-                <li class="flex gap-2"><span>✔</span> Directed a portfolio of high-concurrency enterprise applications at Rakuten, managing 8,000+ users with &lt;150ms latency and delivering ¥32M+ in annual profit through strategic infrastructure optimization.</li>
-                <li class="flex gap-2"><span>✔</span> Led a $25M Digital Transformation Program for a major insurance tech platform, delivering an ROI exceeding 8% and achieving comprehensive client satisfaction through end-to-end AWS cloud architecture.</li>
-                <li class="flex gap-2"><span>✔</span> Co-founded a high-growth ERP start-up, driving a 15% increase in revenue and 2x faster turnaround time through strategic product ownership and a keen focus on customer-centric business models.</li>
+                <li class="flex gap-2"><span>✔</span> Director of Strategic PMO & Digital Transformation with 15+ years of experience specializing in the "Architecture of Execution." Expert at institutionalizing Global PMO Centers of Excellence (CoE) that bridge the gap between high-level corporate strategy and ground-level operational engineering.</li>
+                <li class="flex gap-2"><span>✔</span> Strategic Governance Leader: Proven track record of architecting the systemic frameworks and roadmaps required to align multi-billion-dollar global portfolios and complex M&A infrastructure integrations (Renesas, Rakuten).</li>
+                <li class="flex gap-2"><span>✔</span> Operational Excellence: Directed $25M+ digital transformation portfolios, consistently delivering 8%+ ROI and achieving significant cost reductions (¥32M+ annually) through technical restructuring and license optimization.</li>
+                <li class="flex gap-2"><span>✔</span> Global Matrix Navigator: Highly adept to operate at the intersection of Western "Agile" speed and traditional Japanese corporate governance, translating technical roadmaps into measurable business outcomes for board-level stakeholders.</li>
+                <li class="flex gap-2"><span>✔</span> Delivery Engine Builder: Specialized in synthesizing fragmented, cross-functional teams across JAPAC, EMEA, and North America into unified delivery engines, ensuring long-term ecosystem stability and revenue-aligned operational scaling.</li>
             </ul>
         </section>
         
@@ -189,27 +215,27 @@
             <div class="competencies-container grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-justify dark:text-darkSub">
                 <div>
                     <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-chess-knight"></i> Strategic Leadership:
+                        <i class="fas fa-sitemap"></i> Execution Architecture:
                     </h4>
-                    <p>PMO Center of Excellence Establishment, M&A Integration Governance & Strategy, Operational Excellence, Executive Stakeholder Engagement, Governance Frameworks, JAPAC Market Strategy.</p>
+                    <p>Global PMO CoE Establishment | M&A Integration Governance | JAPAC Market Strategy | Strategy-to-Execution Mapping | Executive Stakeholder Steering</p>
                 </div>
                 <div>
                     <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-microchip"></i> Technical Program Management:
+                        <i class="fas fa-cogs"></i> Operational Engineering:
                     </h4>
-                    <p>Large-Scale Cloud Migration (AWS/Hybrid), Infrastructure Scalability, Portfolio Risk & Dependency Management, End-to-End Delivery Lifecycle, Saas/PaaS Governance.</p>
+                    <p>Business Process Re-engineering | Cost Optimization (TCO) | Vendor Strategy & Strategic In-sourcing | Resource Capacity Planning | P&L & Budgetary Alignment</p>
                 </div>
                 <div>
                     <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-rocket"></i> Digital Transformation:
+                        <i class="fas fa-cloud-upload-alt"></i> Technology & Cloud Strategy:
                     </h4>
-                    <p>Enterprise Application Architecture, High-Concurrency systems (&lt;150ms Latency), Data-Driven Performance Optimization, Global Service Delivery, Systems Interoperability.</p>
+                    <p>Cloud Economics (FinOps) | Enterprise Architecture Governance | Legacy-to-Cloud Modernization | Infrastructure Integration | Digital Roadmap Orchestration</p>
                 </div>
                 <div>
                     <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-chart-line"></i> Operational Maturity:
+                        <i class="fas fa-shield-alt"></i> Governance & Systemic Risk:
                     </h4>
-                    <p>Agile/Hybrid Methodologies, Process Innovation & Automation, Budgetary Oversight ($25M+), ROI & Value Realization, Cross-Functional Team Leadership.</p>
+                    <p>Governance-as-a-Service (GaaS) | Change Management | Regulatory Compliance | Agile/Hybrid Delivery Models | Maturity Assessment Models | Value Realization Frameworks</p>
                 </div>
             </div>
         </section>
@@ -218,15 +244,15 @@
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-6 pb-1 uppercase tracking-wider">Experience</h2>
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Senior Manager / PMO Director</h3>
+                    <h3 class="text-sm font-bold dark:text-white">Director of Global Project & Program Management</h3>
                     <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Jan 2025 to Present</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Renesas Electronics Corporation, Tokyo, Japan</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Architected and led the establishment of a PMO Center of Excellence (CoE), institutionalizing a comprehensive enterprise-wide project management framework that directly drove organizational delivery maturity and consistency across complex programs, including M&A integrations.</li>
-                    <li>Served as a strategic partner to senior leadership, ensuring large-scale technology programs remained aligned with global business objectives and compliance standards.</li>
-                    <li>Directed end-to-end IT project management for complex M&A integrations, ensuring seamless system transitions, on-time delivery, and strong business alignment post-acquisition.</li>
-                    <li>Developed and executed strategic plans, managed cross-functional teams, and maintained strong stakeholder engagement to deliver programs & projects on-time and within budget.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Enterprise Governance Architecture:</span> Directed the ground-up institutionalization of the Global PMO Center of Excellence (CoE), transitioning the organization from fragmented execution to a standardized, data-driven global roadmap.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Systemic ROI Optimization:</span> Engineered the Global Project Management Toolkit (Playbook, Governance Framework, and JIRA Automation) to establish a single source of truth, increasing delivery predictability across multi-billion-dollar M&A portfolios.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">M&A Integration & Governance:</span> Directed strategic technical integration for global acquisitions, bridging the gap between Western "Agile" speed and Japanese HQ governance to ensure technical roadmaps remained aligned with board-level ROI.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Governance-as-a-Service:</span> Launched a centralized reporting model that standardized KPIs across JAPAC, EMEA, and North America, directly increasing executive decision-making velocity and cross-functional transparency.</li>                    
                 </ul>
             </div>
 
@@ -235,83 +261,59 @@
                     <h3 class="text-sm font-bold dark:text-white">Senior Program Manager (PMO & Project Design)</h3>
                     <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Aug 2020 to Dec 2024</span>
                 </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Rakuten Group Inc, Tokyo, Japan</p>
+                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Rakuten Group Inc. Tokyo, Japan</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Directed the full project lifecycle for a portfolio of mission-critical enterprise applications supporting 8,000+ concurrent users, resulting in 32M+ JPY in annual profit via infrastructure optimizations.</li>
-                    <li>Owned the execution strategy for high-visibility programs, from conceptual business case development through global deployment and performance tracking.</li>
-                    <li>Managed a distributed team of Product Managers and technical experts, ensuring delivery excellence within an Agile/Hybrid framework.</li>
-                    <li>Successfully launched 3 major capitalizable enterprise applications for 8000+ concurrent users with &lt;150ms latency, resulting in a 5.2mn JPY YoY and another 27.12mn JPY profit via expense reduction.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Infrastructure Strategy & ROI:</span> Engineered a proprietary 2D facility management system to replace high-cost 3rd party licenses, delivering ¥31.78M in annual Op-Ex reduction for Corporate IT.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">High-Concurrency Engineering:</span> Orchestrated the delivery of enterprise applications supporting 8,000+ concurrent users with sub-150ms latency, ensuring ecosystem stability during high-growth cycles.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Strategic Digital Transformation:</span> Executed and delivered a portfolio of automation platforms (Health Management & ESG Data Tracking), reducing administrative overhead by 90% (from 5 days to 30 mins) and generating ¥5.2M in annual efficiency gains.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Agile Governance:</span> Transitioned fragmented engineering teams to a unified delivery model, aligning technical debt management with revenue-generating business roadmaps.</li>
                 </ul>
             </div>
 
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Senior Manager - Technology (IT Strategy & Service Delivery)</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2018 to Jun 2020</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Jun 2020</span>
                 </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies Japan K.K, Tokyo, Japan | Client: Asurion Japan</p>
+                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies | Tokyo | Client: Asurion Japan | <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2018 to Jun 2020</span></p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Led a ¥25M Digital Transformation and Cloud Migration Program for a major insurance tech platform, delivering an ROI exceeding 8% through capital expense reduction.</li>
-                    <li>Functioned as a Chief of Service Delivery, outlining the strategic plans and controlling budgets/resources for a 30+ member global team.</li>
-                    <li>Delivered key projects, including the development of a web-based insurance claims system and comprehensive data migration, utilizing end-to-end AWS architecture and DevOps infrastructure management.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Cloud Transformation Architecture:</span> Directed ‘Project Horizon,’ a $25M legacy-to-cloud migration for a major insurance tech platform, delivering a verified 8% ROI through end-to-end AWS architecture.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Portfolio Governance:</span> Managed the mission-critical transition of core insurance systems with zero-downtime, securing 100% stakeholder satisfaction scores from Tier-1 Japanese telecom partners.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Cloud Economics (FinOps):</span> Institutionalized cost-governance protocols and infrastructure spend optimization to protect the $25M budget while maximizing technical scalability.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Executive Translation:</span> Bridged the technical-commercial gap by synthesizing complex AWS architecture into high-level business-value narratives for C-suite buy-in.</li>
+                </ul>
+           
+                <div class="flex justify-between items-baseline mb-1"></div>
+                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies | Bengaluru | Client: Wells Fargo | <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Oct 2018</span></p>
+                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Compliance Infrastructure:</span> Led the IT Products Security Compliance CoE, centralizing vulnerability management and security governance across the bank’s global software portfolio.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Systemic Risk Mitigation:</span> Architected a strategic governance framework to remediate enterprise-wide security gaps, ensuring strict alignment with global financial regulatory standards.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Operational Engineering:</span> Delivered an automated compliance engine using custom intelligence tools, reducing manual processing by 85% and achieving 90% accuracy for high-stakes audits.</li>        
                 </ul>
             </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Manager - Technology (Product Portfolio Management)</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Oct 2018</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies India Pvt. Ltd, Bengaluru, India | Client: Wells Fargo</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Instrumental in establishing an IT Products Security Compliance Center of Excellence (CoE) for the entire bank's IT Operations, focusing on managing security and vulnerability across all software applications and IT Infrastructure.</li>
-                    <li>Innovated and prototyped an automated solution (using web crawling/scripting) that reduced time consumption by over 85% and achieved a 90% output accuracy for compliance process.</li>
-                </ul>
-            </div>
-
+            
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
                     <h3 class="text-sm font-bold dark:text-white">Director | Co-Founder</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Apr 2015 to Oct 2017</span>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Mar 2011 to Oct 2017</span>
                 </div>
                 <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Y2K2 Content Management Solutions Pvt. Ltd, Chennai, India</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>As Co-Founder and Technology Head, developed a logistics ERP product focused on Fleet Management and Vehicle Tracking solutions.</li>
-                    <li>Drove tangible business improvement for customers by leveraging the ERP's Data Analytics & Intelligent Reporting features to increase productivity and reduce costs.</li>
-                    <li>Achieved significant business results: 15% average revenue increase, 25% active customer conversion, and a 2x faster turnaround time within the first quarter of deployment.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">P&L & Operational Strategy:</span> Co-founded and scaled an ERP solutions provider to a profitable legal enterprise, driving 15% YoY revenue growth through systemic product positioning and operational engineering.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Execution Architecture:</span> Directed the end-to-end Product Roadmap, transforming complex enterprise requirements into scalable software assets that optimized supply chain and financial workflows for mid-to-large scale clients.</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Operational Excellence:</span> Engineered a customer-centric delivery model that achieved a 2x improvement in service turnaround time, securing long-term master service agreements (MSAs).</li>
+                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Systems Modernization:</span> Orchestrated the transition from legacy manual processes to automated digital workflows, leading "Rapid Incubation" initiatives that significantly de-risked client operations.</li>
                 </ul>
             </div>
 
             <div class="mb-6">
                 <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Entrepreneurial Activities</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Mar 2011 to Mar 2015</span>
+                    <h3 class="text-sm font-bold dark:text-white">Earlier professional Experience</h3>
+                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">2005 to 2011</span>
                 </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Independent Consultant, Chennai, India</p>
+                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Senior Tech.Support Executive | Project Lead | Independent Consultant</p>
                 <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Organized, structured, and invested in bringing a technology startup to life, focusing on IT Infrastructure, Enterprise ERP Development, Content Management, and Knowledge Processing services.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Database Administrator</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Oct 2010 to Dec 2010</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Meritech Co., Ltd, Tokyo, Japan | Client: Nokia Siemens Networks</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Represented the offshore team as Onsite coordinator, successfully deploying and delivering a major telecom monitoring tool for a leading Japanese mobile network operator.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Senior Technical Support Executive</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Jun 2005 to Aug 2006</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Sutherland Global Services, Chennai, India | Client: Microsoft Corporation</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Served as a senior escalation and research engineer, providing technical support for Microsoft Windows XP to US and Canadian customers.</li>
+                    <li>Successfully progressed through increasingly responsible roles focusing on software engineering, system architecture, and technical team leadership for enterprise-scale projects. (Details are provided upon request or available on LinkedIn).</li>
                 </ul>
             </div>
         </section>
@@ -371,21 +373,39 @@
                 <li>Authored and presented a technical paper at IEICE International Conference at Osaka Prefecture University, Japan.</li>
             </ul>
         </section>
-
+        
         <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Professional Leadership & Recognition</h2>
+            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Languages & Cultural Leadership</h2>
             <ul class="text-sm space-y-2 dark:text-darkSub">
                 <li class="flex items-start gap-2">
-                    <i class="fas fa-trophy text-brandBlue dark:text-darkAccent mt-1"></i>
-                    <span><strong>Chief Guest for a National Conference (2016):</strong> Invited to deliver keynote at R.M.K Engineering College.</span>
+                    <i class="fas fa-globe-asia text-brandBlue dark:text-darkAccent mt-1 w-5 text-center"></i>
+                    <span><strong>English:</strong> Native Level Fluency.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                    <i class="fas fa-star text-brandBlue dark:text-darkAccent mt-1"></i>
-                    <span><strong>'Distinguished Alumnus of the IT Department' Award (2015):</strong> Awarded for professional success and contributions to the field by R.M.K Engineering College.</span>
+                    <i class="fas fa-torii-gate text-brandBlue dark:text-darkAccent mt-1 w-5 text-center"></i>
+                    <span><strong>Japanese:</strong> Functional Literacy & Stakeholder Management at Business Level Fluency.</span>
                 </li>
             </ul>
         </section>
         
+        <section class="mb-8">
+            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Professional Leadership & Recognition</h2>
+            <ul class="text-sm space-y-3 dark:text-darkSub">
+                <li class="flex items-start gap-2">
+                    <i class="fas fa-microphone-alt text-brandBlue dark:text-darkAccent mt-1"></i>
+                    <span><strong>Industry Thought Leadership:</strong> Invited as Chief Guest & Keynote Speaker for a National Conference, providing strategic insights on Digital Transformation and Entrepreneurship at R.M.K Engineering College (2016)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <i class="fas fa-user-graduate text-brandBlue dark:text-darkAccent mt-1"></i>
+                    <span><strong>Academic Excellence & Success:</strong> Honored as ‘Distinguished Alumnus of the IT Department (2015)’ for professional achievements and continued contributions to the field of Information Technology.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <i class="fas fa-file-alt text-brandBlue dark:text-darkAccent mt-1"></i>
+                    <span><strong>Technical Research & Publication:</strong> Authored and presented a peer-reviewed technical paper on Wireless Acoustic Sensor Networks at the IEICE International Conference in Osaka, Japan.</span>
+                </li>
+            </ul>
+        </section>
+
         <section class="mb-8">
             <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-6 pb-1 uppercase tracking-wider">Key Project Portfolio</h2>
             <div class="project-grid grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -468,7 +488,13 @@
     </footer>
 
     <script>
-        // THEME TOGGLE LOGIC
+        // Smooth scrolling anchor logic
+        function scrollToProfile() {
+            document.getElementById('profile-content').scrollIntoView({ behavior: 'smooth' });
+            gtag('event', 'scroll_to_dossier', { 'event_category': 'engagement', 'event_label': 'Hero Anchor Used' });
+        }
+
+        // Dark/Light toggle system
         function toggleTheme() {
             const html = document.documentElement;
             const icon = document.getElementById('theme-icon');
@@ -490,13 +516,16 @@
                 if (el) el.addEventListener('click', () => gtag('event', name, { 'event_category': cat, 'event_label': label }));
             };
 
-            trackEvent('download-btn', 'download_pdf', 'engagement', 'Resume Download');
-            trackEvent('print-btn', 'print_page', 'engagement', 'Resume Print');
-            trackEvent('theme-toggle-btn', 'toggle_theme', 'interface', 'Theme Toggle');
-            trackEvent('send-message-btn', 'send_message_click', 'contact', 'Popup Message Sent');
+            trackEvent('download-btn', 'download_pdf', 'engagement', 'Resume Downloaded');
+            trackEvent('print-btn', 'print_page', 'engagement', 'Profile Printed');
+            trackEvent('toggle-theme-btn', 'toggle_theme', 'interface', 'Theme Toggled');
+            
+            trackEvent('header-email-link', 'header_email_click', 'contact', 'Header Email link Clicked');
+            trackEvent('header-linkedin-link', 'header_linkedin_click', 'contact', 'Header LinkedIn Link Opened');
+            trackEvent('send-message-btn', 'send_message_click', 'contact', 'Popup Send Email Opened');
         });
         
-        // POPUP ANIMATION LOGIC
+        // Popup activation rule
         window.onload = function() {
             setTimeout(function() {
                 const popup = document.getElementById('thank-you-popup');
