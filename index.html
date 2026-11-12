@@ -1,548 +1,605 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="clarity">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMTBBHY7SZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-GMTBBHY7SZ');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aravindh Narayanan | Executive Profile</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brandBlue: '#1e3a8a', 
-                        accentBlue: '#3b82f6',
-                        darkBg: '#131314',     
-                        darkCard: '#1e1f20',   
-                        darkAccent: '#8ab4f8', 
-                        darkText: '#e3e3e3',   
-                        darkSub: '#c4c7c5',    
-                    },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f8">
+  <meta name="description" content="Aravindh Narayanan — Director, Enterprise Transformation & Strategic IT. Global PMO, technology governance and business-aligned transformation.">
+  <meta property="og:title" content="Aravindh Narayanan | Enterprise Transformation & Strategic IT">
+  <meta property="og:description" content="Enterprise technology leadership, global PMO governance and business-aligned transformation. Tokyo, Japan.">
+  <meta property="og:type" content="website">
+  <title>Aravindh Narayanan | Enterprise Transformation & Strategic IT</title>
 
-    <style>
-        /* --- GLOBAL TRANSITIONS --- */
-        body { transition: background-color 0.3s, color 0.3s; }
-        .resume-page { max-width: 900px; margin: 0 auto; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* --- UI COMPONENTS --- */
-        .section-title { border-bottom: 2px solid #1e3a8a; }
-        .dark .section-title { border-bottom-color: #444746; } 
-        
-        .name-header {
-            font-family: 'Lora', serif;
-            font-weight: 500; 
-            letter-spacing: 0.10em; 
-        }
+  <!-- Google Analytics 4: existing measurement ID and event listeners retained -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMTBBHY7SZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GMTBBHY7SZ', { anonymize_ip: true });
+  </script>
 
-        /* --- AGGRESSIVE PRINT OPTIMIZATION --- */
-        @media print {
-            .no-print { display: none !important; }
-            
-            html, body { 
-                background: white !important; 
-                color: black !important; 
-                margin: 0 !important;
-                padding: 0 !important;
-                zoom: 87% !important;
-            }
-
-            .resume-page { 
-                box-shadow: none !important; 
-                border: none !important; 
-                width: 100% !important; 
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                background: white !important;
-            }
-            
-            .page-break { break-after: page; padding-bottom: 0.2cm; }
-
-            /* TYPOGRAPHY CALIBRATION FOR PRINT */
-            .name-header { font-size: 18pt !important; margin-bottom: 0.2cm !important; color: #1e3a8a !important; }
-            .section-title { 
-                font-size: 11pt !important; 
-                margin-top: 0.4cm !important;
-                margin-bottom: 0.2cm !important;
-                border-bottom: 1.5pt solid #1e3a8a !important;
-                color: #1e3a8a !important;
-            }
-            h3, h4 { font-size: 9.5pt !important; color: #1e3a8a !important; margin-bottom: 2px !important; }
-            p, li, span, div { font-size: 9.5pt !important; line-height: 1.1 !important; color: black !important; }
-
-            /* UN-BOXING COMPETENCIES & CERTS */
-            .certs-container, .competencies-container, .certs-container div, .competencies-container div {
-                border: none !important;
-                background: transparent !important;
-                padding: 0 !important;
-                margin-bottom: 2px !important;
-                box-shadow: none !important;
-            }
-
-            .certs-container, .competencies-container {
-                display: grid !important;
-                grid-template-columns: 1fr 1fr !important;
-                column-gap: 1cm !important;
-            }
-
-            /* PORTFOLIO LIST VIEW (PRINTER FRIENDLY) */
-            .project-grid { display: block !important; } 
-            
-            .project-card {
-                border: none !important;
-                border-top: 0.5pt solid #e2e8f0 !important;
-                background: transparent !important;
-                padding: 8px 0 !important;
-                margin-bottom: 4px !important;
-                page-break-inside: avoid !important;
-                display: block !important;
-                width: 100% !important;
-            }
-
-            .meta-bar {
-                display: flex !important;
-                flex-direction: row !important;
-                justify-content: flex-start !important;
-                gap: 15px !important;
-                border: none !important;
-                margin-bottom: 2px !important;
-                padding-bottom: 0 !important;
-                font-size: 8.5pt !important;
-                color: #666 !important;
-            }
-            .meta-bar span { display: none; }
-
-            /* DARK MODE OVERRIDES (FORCE WHITE PRINT) */
-            .dark .resume-page, .dark .grid > div, .dark .border { background: white !important; color: black !important; }
-            .dark .section-title { border-bottom-color: #1e3a8a !important; }
-            .dark .name-header, .dark h2, .dark h3, .dark h4 { color: #1e3a8a !important; }
-            .dark p, .dark li, .dark span, .dark div, .dark strong { color: black !important; }
-
-            @page { margin: 1.1cm 1.4cm; }
-        }
-    </style>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --surface: #ffffff;
+      --surface-2: #edf1f5;
+      --ink: #152338;
+      --ink-2: #34445a;
+      --muted: #68778b;
+      --line: #dce3eb;
+      --accent: #285f96;
+      --accent-2: #9bbbd9;
+      --accent-soft: #e6eef6;
+      --header: rgba(255,255,255,.91);
+      --navy-panel: #142b49;
+      --navy-panel-text: #ffffff;
+      --shadow: 0 22px 60px rgba(20,43,73,.09);
+      --max: 1160px;
+    }
+    html[data-theme="enterprise"] {
+      color-scheme: dark;
+      --bg: #0c1420;
+      --surface: #111d2b;
+      --surface-2: #172638;
+      --ink: #edf3f8;
+      --ink-2: #c0ccda;
+      --muted: #94a5b8;
+      --line: #29394c;
+      --accent: #8db9e5;
+      --accent-2: #527da8;
+      --accent-soft: #1c3045;
+      --header: rgba(12,20,32,.92);
+      --navy-panel: #1b3552;
+      --navy-panel-text: #f4f7fb;
+      --shadow: 0 22px 60px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 400 15px/1.7 "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased; transition: background .25s ease, color .25s ease;
+    }
+    a { color: inherit; }
+    .container { width: min(var(--max), calc(100% - 52px)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 30; background: var(--header);
+      border-bottom: 1px solid var(--line); backdrop-filter: blur(14px);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; font: 800 18px Manrope,sans-serif; letter-spacing: -.06em; }
+    .brand span { color: var(--accent); }
+    .nav-right, .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a { color: var(--muted); font-size: 12px; font-weight: 700; text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links .nav-download { color: var(--navy-panel-text); background: var(--navy-panel); padding: 10px 15px; }
+    .theme-toggle {
+      border: 1px solid var(--line); color: var(--ink); background: var(--surface);
+      min-height: 38px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px;
+      font: 700 11px "DM Sans",sans-serif; cursor: pointer; border-radius: 3px;
+    }
+    .theme-toggle:hover { border-color: var(--accent); }
+    .theme-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); display: inline-block; }
+    .hero { background: var(--surface); border-bottom: 1px solid var(--line); overflow: hidden; }
+    .hero-grid {
+      min-height: 625px; display: grid; grid-template-columns: minmax(0,1.35fr) minmax(280px,.65fr);
+      align-items: center; gap: 70px; padding: 82px 0 88px;
+    }
+    .eyebrow, .section-kicker {
+      color: var(--accent); text-transform: uppercase; letter-spacing: .17em;
+      font-size: 10px; font-weight: 700;
+    }
+    .eyebrow { margin: 0 0 23px; }
+    h1,h2,h3,h4 { font-family: Manrope,sans-serif; line-height: 1.18; }
+    h1 { font-size: clamp(46px,6.2vw,76px); line-height: 1.02; letter-spacing: -.065em; margin: 0; font-weight: 800; }
+    .hero-role { margin: 23px 0 9px; color: var(--ink); font: 700 clamp(19px,2vw,25px)/1.35 Manrope,sans-serif; letter-spacing: -.035em; }
+    .hero-specialty { color: var(--accent); margin: 0 0 24px; font-size: 13px; font-weight: 700; letter-spacing: .015em; }
+    .hero-copy { color: var(--ink-2); font-size: 16px; line-height: 1.9; max-width: 680px; margin: 0; }
+    .hero-meta { margin-top: 25px; display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: 12px; }
+    .hero-meta a { text-decoration: none; }
+    .hero-meta a:hover { color: var(--accent); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 31px; }
+    .button {
+      min-height: 46px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; text-decoration: none; font-size: 12px; font-weight: 700; border: 1px solid transparent;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--navy-panel); color: var(--navy-panel-text); }
+    .button-primary:hover { background: var(--accent); color: #071525; }
+    .button-secondary { border-color: var(--line); color: var(--ink); background: transparent; }
+    .button-secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .portrait-frame { position: relative; width: 100%; max-width: 350px; justify-self: end; }
+    .portrait-frame::before { display: none;}
+    .portrait { position:relative; display:block; width:100%; height: auto; max-width: 100%; aspect-ratio: auto; object-fit: contain;  box-shadow:var(--shadow); background: var(--surface-2); }
+    .portrait-caption { position:relative; z-index:1; text-align:center; color:var(--muted); font-size:10px; margin-top:12px; letter-spacing:.06em; text-transform:uppercase; }
+    .section { padding: 94px 0; }
+    .section-alt { background: var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .section-head { max-width: 760px; margin-bottom: 42px; }
+    .section-kicker { margin:0 0 13px; }
+    h2 { color:var(--ink); font-size:clamp(30px,3.6vw,43px); letter-spacing:-.05em; margin:0 0 14px; }
+    .section-intro { color:var(--muted); font-size:14px; max-width:710px; margin:0; line-height:1.85; }
+    .mandates { display:grid; grid-template-columns:repeat(3,1fr); gap:34px; }
+    .mandate { border-top:2px solid var(--accent); padding-top:19px; }
+    .mandate-index { color:var(--accent); font:700 11px Manrope,sans-serif; letter-spacing:.1em; }
+    .mandate h3 { color:var(--ink); font-size:18px; margin:17px 0 10px; letter-spacing:-.025em; }
+    .mandate p { color:var(--muted); font-size:13px; line-height:1.85; margin:0; }
+    .impact-band { background:var(--navy-panel); color:var(--navy-panel-text); padding:47px 0 50px; }
+    .impact-top { display:flex; justify-content:space-between; align-items:end; gap:25px; margin-bottom:29px; }
+    .impact-top .section-kicker { color:#a9c8e7; }
+    .impact-top h2 { color:var(--navy-panel-text); margin:0; font-size:clamp(27px,3vw,36px); }
+    .impact-top p { color:#c1cfdd; font-size:12px; max-width:330px; margin:0; }
+    .metrics { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid rgba(255,255,255,.2); }
+    .metric { padding:26px 22px 0 0; border-right:1px solid rgba(255,255,255,.2); margin-right:22px; }
+    .metric:last-child { border:0; margin:0; }
+    .metric-value { font:800 clamp(27px,3.4vw,40px)/1.1 Manrope,sans-serif; letter-spacing:-.055em; white-space:nowrap; }
+    .metric-label { color:#c1cfdd; font-size:11px; line-height:1.6; margin-top:9px; max-width:190px; }
+    .career-intro { display:flex; align-items:end; justify-content:space-between; gap:28px; }
+    .career-intro .section-head { margin-bottom:42px; }
+    .timeline { position:relative; margin-left:7px; }
+    .timeline::before { content:""; position:absolute; left:177px; top:11px; bottom:10px; width:1px; background:var(--line); }
+    .role { display:grid; grid-template-columns:150px 1fr; gap:58px; position:relative; padding:0 0 49px; }
+    .role:last-child { padding-bottom:0; }
+    .role::before { content:""; position:absolute; left:171px; top:7px; width:11px; height:11px; border-radius:50%; background:var(--bg); border:2px solid var(--accent); z-index:1; }
+    .role-date { color:var(--muted); font:700 11px Manrope,sans-serif; letter-spacing:.035em; padding-top:4px; text-align:right; }
+    .role-content { padding-bottom:0; }
+    .role h3 { color:var(--ink); font-size:21px; margin:0 0 5px; letter-spacing:-.035em; }
+    .role-company { color:var(--accent); font-size:12px; font-weight:700; margin-bottom:13px; }
+    .role-summary { color:var(--ink-2); font-size:13px; line-height:1.85; max-width:800px; margin:0; }
+    .role-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:15px; }
+    .role-tags span { color:var(--muted); border:1px solid var(--line); padding:4px 8px; font-size:10px; letter-spacing:.015em; }
+    .outcomes { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+    .outcome { background:var(--surface); padding:29px 30px 31px; min-height:225px; display:flex; flex-direction:column; }
+    .outcome-type { color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:9px; font-weight:700; }
+    .outcome h3 { color:var(--ink); font-size:20px; letter-spacing:-.035em; margin:13px 0 10px; }
+    .outcome p { color:var(--muted); font-size:12px; line-height:1.8; margin:0; max-width:500px; }
+    .outcome-result { margin-top:auto; padding-top:20px; color:var(--ink); font:700 15px Manrope,sans-serif; }
+    .outcome-result strong { color:var(--accent); }
+    .credentials { display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+    .credential-block { border-top:1px solid var(--line); padding-top:18px; }
+    .credential-block h3 { color:var(--ink); font-size:16px; margin:0 0 13px; }
+    .credential-block p { color:var(--muted); font-size:12px; margin:0 0 8px; }
+    .contact-section { padding:0 0 90px; }
+    .contact-panel { background:var(--navy-panel); color:var(--navy-panel-text); padding:53px 57px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+    .contact-panel .section-kicker { color:#a9c8e7; }
+    .contact-panel h2 { color:var(--navy-panel-text); margin-bottom:10px; }
+    .contact-panel p { color:#c1cfdd; font-size:13px; margin:0; }
+    .contact-actions { display:flex; flex-wrap:wrap; gap:10px; flex-shrink:0; }
+    .contact-panel .button-primary { background:#fff; color:#142b49; }
+    .contact-panel .button-secondary { color:#fff; border-color:#71859c; }
+    footer { padding:23px 0; border-top:1px solid var(--line); color:var(--muted); font-size:10px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    .footer-links { display:flex; gap:18px; }
+    .footer-links a { text-decoration:none; }
+    .footer-links a:hover { color:var(--accent); }
+    :focus-visible { outline:3px solid var(--accent-2); outline-offset:3px; }
+    @media (max-width:900px) {
+      .hero-grid { gap:40px; grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr); }
+      .metrics { grid-template-columns:repeat(2,1fr); row-gap:24px; }
+      .metric:nth-child(2) { border-right:0; margin-right:0; }
+      .metric:nth-child(3) { border-top:1px solid rgba(255,255,255,.2); padding-top:24px; }
+      .metric:nth-child(4) { border-top:1px solid rgba(255,255,255,.2); padding-top:24px; }
+      .mandates { gap:23px; }
+    }
+    @media (max-width:680px) {
+      .container { width:calc(100% - 36px); }
+      .nav { min-height:66px; }
+      .nav-right { gap:10px; }
+      .nav-links { gap:13px; }
+      .nav-links a:not(.nav-download) { display:none; }
+      .nav-links .nav-download { padding:9px 11px; font-size:10px; }
+      .theme-toggle { padding:0 9px; font-size:10px; }
+      .hero-grid { display:flex; flex-direction:column-reverse; align-items:stretch; gap:34px; padding:45px 0 58px; }
+      .portrait-frame { width:190px; justify-self:start; }
+      .portrait-caption { text-align:left; }
+      h1 { font-size:48px; }
+      .hero-copy { font-size:14px; }
+      .section { padding:68px 0; }
+      .mandates { grid-template-columns:1fr; gap:27px; }
+      .impact-top { display:block; }
+      .impact-top p { margin-top:12px; }
+      .metric { padding-right:12px; margin-right:12px; }
+      .metric-value { font-size:29px; }
+      .metric-label { font-size:10px; }
+      .timeline { margin-left:0; }
+      .timeline::before { left:5px; }
+      .role { display:block; padding:0 0 36px 27px; }
+      .role::before { left:0; }
+      .role-date { text-align:left; padding:0 0 9px; font-size:10px; }
+      .role h3 { font-size:19px; }
+      .outcomes, .credentials { grid-template-columns:1fr; }
+      .outcome { min-height:0; padding:25px; }
+      .credentials { gap:30px; }
+      .contact-section { padding-bottom:60px; }
+      .contact-panel { display:block; padding:34px 25px; }
+      .contact-actions { margin-top:24px; }
+      .footer-inner { display:block; }
+      .footer-links { margin-top:10px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-darkText antialiased p-4 md:p-8">
-
-    <div class="fixed top-4 right-4 flex gap-2 no-print z-50">
-        <button id="toggle-theme-btn" onclick="toggleTheme()" class="p-2 bg-white dark:bg-darkCard rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300" title="Toggle Theme">
-            <i id="theme-icon" class="fas fa-moon text-brandBlue dark:text-darkAccent"></i>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Aravindh Narayanan home">AN<span>.</span></a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#profile">Profile</a>
+          <a href="#experience">Career</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-download" href="Aravindh_Narayanan_Executive_Profile.pdf" id="nav-cv-download" download>Download CV ↗</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to Enterprise dark theme" aria-pressed="false">
+          <span class="theme-dot" aria-hidden="true"></span><span id="theme-label">Enterprise</span>
         </button>
-        
-        <button id="print-btn" onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-darkCard text-brandBlue dark:text-darkAccent rounded-full shadow-lg border border-gray-200 dark:border-[#444746] hover:bg-gray-300 transition">
-            <i class="fas fa-print"></i> <span class="text-sm font-semibold">Print</span>
-        </button>
-
-        <a id="download-btn" href="Aravindh_Narayanan_Executive_Profile.pdf" download class="flex items-center gap-2 px-4 py-2 bg-brandBlue text-white dark:bg-darkAccent dark:text-darkBg rounded-full shadow-lg hover:bg-blue-800 transition">
-            <i class="fas fa-download"></i> <span class="text-sm font-semibold">Download PDF</span>
-        </a>
+      </div>
     </div>
+  </header>
 
-    <section class="no-print min-h-[90vh] flex flex-col justify-center items-center text-center max-w-2xl mx-auto px-4 mb-12 border-b border-gray-200 dark:border-[#444746] pb-12">
-        <h1 class="name-header font-semibold text-4xl md:text-5xl text-brandBlue dark:text-white uppercase mb-2">
-            ARAVINDH NARAYANAN
-        </h1>
-        <p class="text-xs md:text-sm font-semibold uppercase tracking-widest text-accentBlue dark:text-darkAccent mb-8">
-            Director of Strategic PMO & Digital Transformation
-        </p>
-
-        <p class="text-sm md:text-base text-gray-600 dark:text-darkSub leading-relaxed text-justify mb-8 font-light">
-            Specializing in the <strong class="font-semibold text-brandBlue dark:text-white">"Architecture of Execution."</strong> Over 15 years of experience institutionalizing Global PMO Centers of Excellence (CoE), navigating complex M&A infrastructure integrations, and orchestrating multi-million-dollar legacy-to-cloud transformation portfolios across the JAPAC market.
-        </p>
-
-        <div class="grid grid-cols-2 gap-x-6 gap-y-3 max-w-lg mx-auto mb-10 text-left text-[11px] uppercase tracking-wider font-semibold text-gray-500 dark:text-darkSub">
-            <div class="flex items-center gap-2"><i class="fas fa-sitemap text-brandBlue dark:text-darkAccent"></i> Execution Architecture</div>
-            <div class="flex items-center gap-2"><i class="fas fa-cogs text-brandBlue dark:text-darkAccent"></i> Operational Engineering</div>
-            <div class="flex items-center gap-2"><i class="fas fa-cloud text-brandBlue dark:text-darkAccent"></i> Cloud Economics</div>
-            <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-brandBlue dark:text-darkAccent"></i> Systemic Risk Governance</div>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Technology Leadership · Tokyo, Japan</p>
+          <h1>Aravindh<br>Narayanan</h1>
+          <p class="hero-role">Director, Enterprise Transformation &amp; Strategic IT</p>
+          <p class="hero-specialty">Global PMO · Technology Governance · Business-Aligned Transformation</p>
+          <p class="hero-copy">
+            I build the governance and execution architecture that connects enterprise strategy to measurable business outcomes.
+            Across global technology organizations, my remit has included establishing a Global PMO Center of Excellence,
+            governing post-merger integration, modernizing enterprise platforms and directing complex cloud transformation.
+          </p>
+          <div class="hero-meta">
+            <span>Tokyo, Japan</span>
+            <a href="mailto:avdnanjp@gmail.com" id="hero-email">avdnanjp@gmail.com</a>
+            <a href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" id="hero-linkedin">LinkedIn ↗</a>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="Aravindh_Narayanan_Executive_Profile.pdf" id="hero-cv-download" download>↓ &nbsp; Executive CV</a>
+            <a class="button button-secondary" href="#profile" id="explore-profile">Explore Profile ↓</a>
+          </div>
         </div>
-
-        <div class="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
-            <button onclick="scrollToProfile()" class="w-full sm:w-auto px-6 py-3 bg-brandBlue text-white dark:bg-darkAccent dark:text-darkBg font-semibold rounded-lg shadow-md hover:opacity-90 transition flex items-center justify-center gap-2 uppercase text-xs tracking-wider">
-                <i class="fas fa-arrow-down"></i> Scroll to Full Dossier
-            </button>
+        <div class="portrait-frame">
+          <img class="portrait" src="an.jpg" alt="Aravindh Narayanan" width="900" height="1125" fetchpriority="high">
+          <div class="portrait-caption">Enterprise technology leadership</div>
         </div>
+      </div>
     </section>
 
-    <div id="profile-content" class="resume-page bg-white dark:bg-darkCard shadow-2xl p-8 md:p-12 rounded-sm border-t-8 border-brandBlue dark:border-darkAccent">
-        
-        <header class="text-center mb-8">
-            <h1 class="name-header font-semibold text-4xl text-brandBlue dark:text-white uppercase mb-4">ARAVINDH NARAYANAN</h1>
-            <div class="flex flex-wrap justify-center gap-4 text-sm mb-4">
-                <a id="header-email-link" href="mailto:avdnanjp@gmail.com?subject=Message about your GitHub Profile&body=Hello Aravindh," class="hover:text-accentBlue dark:hover:text-white">
-                    <i class="fas fa-envelope text-accentBlue dark:text-darkAccent mr-1"></i> avdnanjp@gmail.com
-                </a>
-                <span><i class="fas fa-map-marker-alt text-accentBlue dark:text-darkAccent mr-1"></i> Tokyo, Japan</span>
-                <a id="header-linkedin-link" href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" class="hover:text-accentBlue dark:hover:text-white">
-                    <i class="fab fa-linkedin text-accentBlue dark:text-darkAccent mr-1"></i> LinkedIn Profile
-                </a>
-            </div>
-        </header>
-
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Executive Summary</h2>
-            <ul class="space-y-2 list-none text-sm text-justify dark:text-darkSub">
-                <li class="flex gap-2"><span>✔</span> Director of Strategic PMO & Digital Transformation with 15+ years of experience specializing in the "Architecture of Execution." Expert at institutionalizing Global PMO Centers of Excellence (CoE) that bridge the gap between high-level corporate strategy and ground-level operational engineering.</li>
-                <li class="flex gap-2"><span>✔</span> Strategic Governance Leader: Proven track record of architecting the systemic frameworks and roadmaps required to align multi-billion-dollar global portfolios and complex M&A infrastructure integrations (Renesas, Rakuten).</li>
-                <li class="flex gap-2"><span>✔</span> Operational Excellence: Directed $25M+ digital transformation portfolios, consistently delivering 8%+ ROI and achieving significant cost reductions (¥32M+ annually) through technical restructuring and license optimization.</li>
-                <li class="flex gap-2"><span>✔</span> Global Matrix Navigator: Highly adept to operate at the intersection of Western "Agile" speed and traditional Japanese corporate governance, translating technical roadmaps into measurable business outcomes for board-level stakeholders.</li>
-                <li class="flex gap-2"><span>✔</span> Delivery Engine Builder: Specialized in synthesizing fragmented, cross-functional teams across JAPAC, EMEA, and North America into unified delivery engines, ensuring long-term ecosystem stability and revenue-aligned operational scaling.</li>
-            </ul>
-        </section>
-        
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Core Competencies / Skills</h2>
-            <div class="competencies-container grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-justify dark:text-darkSub">
-                <div>
-                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-sitemap"></i> Execution Architecture:
-                    </h4>
-                    <p>Global PMO CoE Establishment | M&A Integration Governance | JAPAC Market Strategy | Strategy-to-Execution Mapping | Executive Stakeholder Steering</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-cogs"></i> Operational Engineering:
-                    </h4>
-                    <p>Business Process Re-engineering | Cost Optimization (TCO) | Vendor Strategy & Strategic In-sourcing | Resource Capacity Planning | P&L & Budgetary Alignment</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-cloud-upload-alt"></i> Technology & Cloud Strategy:
-                    </h4>
-                    <p>Cloud Economics (FinOps) | Enterprise Architecture Governance | Legacy-to-Cloud Modernization | Infrastructure Integration | Digital Roadmap Orchestration</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-brandBlue dark:text-darkAccent flex items-center gap-2 mb-1">
-                        <i class="fas fa-shield-alt"></i> Governance & Systemic Risk:
-                    </h4>
-                    <p>Governance-as-a-Service (GaaS) | Change Management | Regulatory Compliance | Agile/Hybrid Delivery Models | Maturity Assessment Models | Value Realization Frameworks</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-6 pb-1 uppercase tracking-wider">Experience</h2>
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Director of Global Project & Program Management</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Jan 2025 to Present</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Renesas Electronics Corporation, Tokyo, Japan</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Enterprise Governance Architecture:</span> Directed the ground-up institutionalization of the Global PMO Center of Excellence (CoE), transitioning the organization from fragmented execution to a standardized, data-driven global roadmap.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Systemic ROI Optimization:</span> Engineered the Global Project Management Toolkit (Playbook, Governance Framework, and JIRA Automation) to establish a single source of truth, increasing delivery predictability across multi-billion-dollar M&A portfolios.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">M&A Integration & Governance:</span> Directed strategic technical integration for global acquisitions, bridging the gap between Western "Agile" speed and Japanese HQ governance to ensure technical roadmaps remained aligned with board-level ROI.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Governance-as-a-Service:</span> Launched a centralized reporting model that standardized KPIs across JAPAC, EMEA, and North America, directly increasing executive decision-making velocity and cross-functional transparency.</li>                    
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Senior Program Manager (PMO & Project Design)</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Aug 2020 to Dec 2024</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Rakuten Group Inc. Tokyo, Japan</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Infrastructure Strategy & ROI:</span> Engineered a proprietary 2D facility management system to replace high-cost 3rd party licenses, delivering ¥31.78M in annual Op-Ex reduction for Corporate IT.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">High-Concurrency Engineering:</span> Orchestrated the delivery of enterprise applications supporting 8,000+ concurrent users with sub-150ms latency, ensuring ecosystem stability during high-growth cycles.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Strategic Digital Transformation:</span> Executed and delivered a portfolio of automation platforms (Health Management & ESG Data Tracking), reducing administrative overhead by 90% (from 5 days to 30 mins) and generating ¥5.2M in annual efficiency gains.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Agile Governance:</span> Transitioned fragmented engineering teams to a unified delivery model, aligning technical debt management with revenue-generating business roadmaps.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Senior Manager - Technology (IT Strategy & Service Delivery)</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Jun 2020</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies | Tokyo | Client: Asurion Japan | <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2018 to Jun 2020</span></p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Cloud Transformation Architecture:</span> Directed ‘Project Horizon,’ a $25M legacy-to-cloud migration for a major insurance tech platform, delivering a verified 8% ROI through end-to-end AWS architecture.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Portfolio Governance:</span> Managed the mission-critical transition of core insurance systems with zero-downtime, securing 100% stakeholder satisfaction scores from Tier-1 Japanese telecom partners.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Cloud Economics (FinOps):</span> Institutionalized cost-governance protocols and infrastructure spend optimization to protect the $25M budget while maximizing technical scalability.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Executive Translation:</span> Bridged the technical-commercial gap by synthesizing complex AWS architecture into high-level business-value narratives for C-suite buy-in.</li>
-                </ul>
-           
-                <div class="flex justify-between items-baseline mb-1"></div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Synechron Technologies | Bengaluru | Client: Wells Fargo | <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Nov 2017 to Oct 2018</span></p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Compliance Infrastructure:</span> Led the IT Products Security Compliance CoE, centralizing vulnerability management and security governance across the bank’s global software portfolio.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Systemic Risk Mitigation:</span> Architected a strategic governance framework to remediate enterprise-wide security gaps, ensuring strict alignment with global financial regulatory standards.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Operational Engineering:</span> Delivered an automated compliance engine using custom intelligence tools, reducing manual processing by 85% and achieving 90% accuracy for high-stakes audits.</li>        
-                </ul>
-            </div>
-            
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Director | Co-Founder</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Mar 2011 to Oct 2017</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Y2K2 Content Management Solutions Pvt. Ltd, Chennai, India</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">P&L & Operational Strategy:</span> Co-founded and scaled an ERP solutions provider to a profitable legal enterprise, driving 15% YoY revenue growth through systemic product positioning and operational engineering.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Execution Architecture:</span> Directed the end-to-end Product Roadmap, transforming complex enterprise requirements into scalable software assets that optimized supply chain and financial workflows for mid-to-large scale clients.</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Operational Excellence:</span> Engineered a customer-centric delivery model that achieved a 2x improvement in service turnaround time, securing long-term master service agreements (MSAs).</li>
-                    <li><span class="text-sm font-semibold text-gray-800 dark:text-darkSub">Systems Modernization:</span> Orchestrated the transition from legacy manual processes to automated digital workflows, leading "Rapid Incubation" initiatives that significantly de-risked client operations.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="text-sm font-bold dark:text-white">Earlier professional Experience</h3>
-                    <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">2005 to 2011</span>
-                </div>
-                <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Senior Tech.Support Executive | Project Lead | Independent Consultant</p>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                    <li>Successfully progressed through increasingly responsible roles focusing on software engineering, system architecture, and technical team leadership for enterprise-scale projects. (Details are provided upon request or available on LinkedIn).</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-3 pb-1 uppercase tracking-wider">Certifications & Credentials</h2>
-            <div class="certs-container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-1 text-sm dark:text-darkSub">
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">PMP® <span class="font-normal text-gray-500 dark:text-gray-400">| Project Management Professional</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">PRINCE2® <span class="font-normal text-gray-500 dark:text-gray-400">| Foundation Certificate</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">ASM® <span class="font-normal text-gray-500 dark:text-gray-400">| Agile Scrum Master</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">ITIL® v3 <span class="font-normal text-gray-500 dark:text-gray-400">| Foundation Certificate</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">6σ® <span class="font-normal text-gray-500 dark:text-gray-400">| Six Sigma Green Belt</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">SCMS-A <span class="font-normal text-gray-500 dark:text-gray-400">| Marketing Strategy</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">SCDM-A <span class="font-normal text-gray-500 dark:text-gray-400">| Digital Marketing</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">UiPath® <span class="font-normal text-gray-500 dark:text-gray-400">| RPA Developer</span></span>
-                </div>
-                <div class="cert-item flex items-center gap-2">
-                    <i class="fas fa-award text-brandBlue dark:text-darkAccent"></i>
-                    <span class="font-semibold">MCP® <span class="font-normal text-gray-500 dark:text-gray-400">| Microsoft Certified Professional</span></span>
-                </div>
-            </div>
-        </section>
-        
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Education</h2>
-            <div class="flex justify-between items-baseline">
-                <div>
-                    <h3 class="font-bold dark:text-white text-sm">Master of Science (M.S)</h3>
-                    <p class="italic text-brandBlue dark:text-darkAccent mb-2 text-sm">Waseda University | Tokyo, Japan | Major: Global Information and Telecommunication Studies</p>
-                </div>
-                <span class="text-xs font-semibold text-gray-500 dark:text-darkSub">Apr 2008 to Sep 2010</span>
-            </div>
-            <ul class="list-disc ml-5 space-y-1 text-sm text-justify dark:text-darkSub">
-                <li>Authored and presented a technical paper at IEICE International Conference at Osaka Prefecture University, Japan.</li>
-            </ul>
-        </section>
-        
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Languages & Cultural Leadership</h2>
-            <ul class="text-sm space-y-2 dark:text-darkSub">
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-globe-asia text-brandBlue dark:text-darkAccent mt-1 w-5 text-center"></i>
-                    <span><strong>English:</strong> Native Level Fluency.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-torii-gate text-brandBlue dark:text-darkAccent mt-1 w-5 text-center"></i>
-                    <span><strong>Japanese:</strong> Functional Literacy & Stakeholder Management at Business Level Fluency.</span>
-                </li>
-            </ul>
-        </section>
-        
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-4 pb-1 uppercase tracking-wider">Professional Leadership & Recognition</h2>
-            <ul class="text-sm space-y-3 dark:text-darkSub">
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-microphone-alt text-brandBlue dark:text-darkAccent mt-1"></i>
-                    <span><strong>Industry Thought Leadership:</strong> Invited as Chief Guest & Keynote Speaker for a National Conference, providing strategic insights on Digital Transformation and Entrepreneurship at R.M.K Engineering College (2016)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-user-graduate text-brandBlue dark:text-darkAccent mt-1"></i>
-                    <span><strong>Academic Excellence & Success:</strong> Honored as ‘Distinguished Alumnus of the IT Department (2015)’ for professional achievements and continued contributions to the field of Information Technology.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-file-alt text-brandBlue dark:text-darkAccent mt-1"></i>
-                    <span><strong>Technical Research & Publication:</strong> Authored and presented a peer-reviewed technical paper on Wireless Acoustic Sensor Networks at the IEICE International Conference in Osaka, Japan.</span>
-                </li>
-            </ul>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="section-title text-md font-bold text-brandBlue dark:text-white mb-6 pb-1 uppercase tracking-wider">Key Project Portfolio</h2>
-            <div class="project-grid grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
-                    <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-leaf"></i> Energy Tracker | ESG Platform
-                    </h4>
-                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
-                        <p><strong>Org:</strong> Rakuten Group Inc. | <strong>Method:</strong> Hybrid</p>
-                        <p><strong>Budget:</strong> Up to ¥10Million+ | <strong>Team:</strong> 5 to 9</p>
-                        <p><strong>Duration:</strong> Jul 2022 to Feb 2023</p>
-                    </div>
-                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Developed a data-driven platform to centralize global energy consumption management for sustainability reporting for all Rakuten facilities.</p>
-                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Enabled real-time calculation and filtering of energy data, directly supporting <strong>Corporate ESG and sustainability goals</strong>.</p>
-                </div>
-
-                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
-                    <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-building"></i> SpaceStudio | Facility Management
-                    </h4>
-                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
-                        <p><strong>Org:</strong> Rakuten Group Inc. | <strong>Method:</strong> Agile</p>
-                        <p><strong>Budget:</strong> ¥20Million+ | <strong>Team:</strong> 10 to 14</p>
-                        <p><strong>Duration:</strong> Aug 2021 to Aug 2022</p>
-                    </div>
-                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Engineered a proprietary 2D layout booking system to replace high-cost third-party facility management tools across global offices.</p>
-                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Eliminated 3rd party licenses, saving <strong>¥31.78M annually</strong>. Scaled to handle 8,000+ concurrent users with high availability.</p>
-                </div>
-
-                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
-                    <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-calendar-check"></i> EnrollMe | Event Management Automation
-                    </h4>
-                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
-                        <p><strong>Org:</strong> Rakuten Group Inc. | <strong>Method:</strong> Agile</p>
-                        <p><strong>Budget:</strong> ¥10Million+ | <strong>Team:</strong> 5 to 9</p>
-                        <p><strong>Duration:</strong> Dec 2020 to Nov 2021</p>
-                    </div>
-                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Developed a custom COVID-19 vaccination and corporate health event management system to automate manual scheduling.</p>
-                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Reduced event creation time from 5.5 days to <strong>30 minutes</strong>. Earning a direct profit of ¥217K/entity while generating a projected annual cost reduction of ¥5.2M.</p>
-                </div>
-
-                <div class="project-card border border-gray-200 dark:border-[#444746] p-4 rounded bg-gray-50/50 dark:bg-darkBg hover:border-accentBlue dark:hover:border-darkAccent transition">
-                    <h4 class="text-brandBlue dark:text-darkAccent font-bold mb-2 flex items-center gap-2">
-                        <i class="fas fa-cloud"></i> Horizon | Cloud Transformation
-                    </h4>
-                    <div class="meta-bar text-[12px] space-y-1 mb-3 dark:text-darkSub">
-                        <p><strong>Org:</strong> Synechron Japan | <strong>Method:</strong> Hybrid</p>
-                        <p><strong>Budget:</strong> $25Million+ | <strong>Team:</strong> 30+ Global</p>
-                        <p><strong>Duration:</strong> Jan 2019 to Jun 2020</p>
-                    </div>
-                    <p class="text-xs text-justify dark:text-darkSub mb-2"><strong>Strategic Objective:</strong> Directed the legacy-to-cloud migration of an insurance tech platform for two major Japanese mobile telecom operators.</p>
-                    <p class="text-xs text-justify dark:text-darkSub"><strong>Business Impact:</strong> Achieved an <strong>ROI exceeding 8%</strong>. Engineered a cloud-native architecture supporting 3,000+ concurrent user sessions.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <div id="thank-you-popup" class="no-print fixed bottom-6 right-6 max-w-sm bg-white dark:bg-darkCard border border-gray-200 dark:border-[#444746] shadow-2xl rounded-2xl p-6 transform translate-y-32 opacity-0 transition-all duration-500 z-50 no-print">
-        <div class="flex items-start gap-4">
-            <div class="bg-brandBlue dark:bg-darkAccent p-2 rounded-full flex-shrink-0">
-                <i class="fas fa-handshake text-white dark:text-darkBg"></i>
-            </div>
-            <div>
-                <h4 class="font-bold text-brandBlue dark:text-darkAccent text-sm mb-2">Thank you for visiting!</h4>
-                <p class="font-bold text-xs text-gray-600 dark:text-darkSub leading-relaxed mb-2">I appreciate your time and interest here.</p>
-                <p class="text-xs font-semibold text-gray-600 dark:text-darkAccent mb-2 ">Please feel free to reach out directly if you'd like to discuss potential leadership opportunities.</p>
-                <div class="mt-4 flex gap-3 items-center">
-                    <a id="send-message-btn" href="mailto:avdnanjp@gmail.com?subject=Strategic Inquiry: Executive Profile Review&body=Hello Aravindh,%0D%0A%0D%0AI have reviewed your profile on your GitHub page. I would like to schedule a brief conversation to discuss how your expertise in PMO Leadership and Digital Transformation could align with our current strategic initiatives.%0D%0A%0D%0ABest regards," class="text-xs font-bold uppercase tracking-wider bg-brandBlue dark:bg-darkAccent text-white dark:text-darkBg px-4 py-2 rounded-lg hover:opacity-80 transition">
-                        <i class="fas fa-paper-plane mr-1"></i> Send Message
-                    </a>
-                    <button onclick="closePopup()" class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition">Dismiss</button>
-                </div>
-            </div>
+    <section class="section section-alt" id="profile">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Leadership mandate</p>
+          <h2>Enterprise scale. Clear accountability.</h2>
+          <p class="section-intro">
+            15+ years across semiconductor, financial services, insurance, e-commerce and enterprise software.
+            The common thread is building operating models that improve governance, delivery predictability and business control.
+          </p>
         </div>
+        <div class="mandates">
+          <article class="mandate">
+            <span class="mandate-index">01 / GOVERNANCE</span>
+            <h3>Global PMO &amp; Portfolio Governance</h3>
+            <p>Establishing enterprise PMO capabilities, governance frameworks, executive reporting and delivery standards across distributed portfolios and regional operating models.</p>
+          </article>
+          <article class="mandate">
+            <span class="mandate-index">02 / TRANSFORMATION</span>
+            <h3>Enterprise Strategy &amp; Integration</h3>
+            <p>Connecting technology roadmaps with business priorities across M&amp;A integration, operating-model change, financial controls, data governance and cross-functional decision-making.</p>
+          </article>
+          <article class="mandate">
+            <span class="mandate-index">03 / DELIVERY</span>
+            <h3>Technology &amp; Cloud Transformation</h3>
+            <p>Directing complex modernization across infrastructure, applications and cloud platforms, with accountability for investment, risk, dependencies, stakeholder alignment and operational readiness.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-band" aria-label="Selected enterprise impact">
+      <div class="container">
+        <div class="impact-top">
+          <div>
+            <p class="section-kicker">Enterprise impact</p>
+            <h2>Scale, value and delivery outcomes.</h2>
+          </div>
+          <p>Selected measures from enterprise transformation and operational improvement mandates.</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">$25M+</div>
+            <div class="metric-label">Transformation investment directed</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">8%+</div>
+            <div class="metric-label">Verified programme return on investment</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">15%</div>
+            <div class="metric-label">Sustained year-over-year business revenue growth</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">35+</div>
+            <div class="metric-label">Cross-border delivery professionals coordinated</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Career progression</p>
+          <h2>From business ownership to global governance.</h2>
+          <p class="section-intro">A progression through entrepreneurship, technology delivery and enterprise-wide leadership across distinct operating environments.</p>
+        </div>
+        <div class="timeline">
+          <article class="role">
+            <div class="role-date">JAN 2025 — PRESENT</div>
+            <div class="role-content">
+              <h3>Director of Global Project &amp; Program Management</h3>
+              <div class="role-company">Renesas Electronics Corporation · Tokyo, Japan</div>
+              <p class="role-summary">Established the Global PMO Center of Excellence and institutionalized a standardized, data-driven governance model. The remit spans global portfolio visibility, execution playbooks, M&amp;A integration governance and alignment between regional delivery teams and Japanese headquarters.</p>
+              <div class="role-tags"><span>Global PMO CoE</span><span>M&amp;A Integration</span><span>Executive Governance</span><span>JAPAC · EMEA · North America</span></div>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-date">AUG 2020 — DEC 2024</div>
+            <div class="role-content">
+              <h3>Senior Program Manager (Projects Design)</h3>
+              <div class="role-company">Rakuten Group Inc. · Tokyo, Japan</div>
+              <p class="role-summary">Led Corporate IT initiatives across enterprise applications and business-process modernization. Worked across Finance, HR and engineering stakeholders to shape solution direction, govern delivery priorities and improve the reliability of services used across the organization.</p>
+              <div class="role-tags"><span>Corporate IT</span><span>Finance &amp; HR Systems</span><span>Enterprise Applications</span><span>Japan · India</span></div>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-date">NOV 2017 — JUN 2020</div>
+            <div class="role-content">
+              <h3>Senior Manager – Technology (IT Strategy &amp; Service Delivery)</h3>
+              <div class="role-company">Synechron Technologies · Japan and India client engagements</div>
+              <p class="role-summary">Held technology strategy and service-delivery responsibilities across insurance and financial-services environments. Directed a major AWS modernization mandate in Japan and established global security-compliance governance for a financial-services software portfolio.</p>
+              <div class="role-tags"><span>Cloud Modernization</span><span>Financial Services</span><span>Security Governance</span><span>Global Delivery</span></div>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-date">MAR 2011 — OCT 2017</div>
+            <div class="role-content">
+              <h3>Director | Co-Founder</h3>
+              <div class="role-company">Y2K2 Content Management Solutions Pvt. Ltd. · Chennai, India</div>
+              <p class="role-summary">Co-founded and scaled an ERP solutions business, with responsibility for P&amp;L, product roadmaps, commercial operations and customer delivery. Built the operating discipline required to grow the business while improving service responsiveness and profitability.</p>
+              <div class="role-tags"><span>Business Leadership</span><span>P&amp;L</span><span>ERP Product Strategy</span><span>Operations</span></div>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-date">2005 — 2011</div>
+            <div class="role-content">
+              <h3>Earlier Technical Experience</h3>
+              <div class="role-company">Software engineering · Technical support · Project leadership</div>
+              <p class="role-summary">Progressive responsibilities across enterprise software engineering, system architecture, technical support and team leadership.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="outcomes">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Selected outcomes</p>
+          <h2>Representative Transformation Milestones</h2>
+          <p class="section-intro">Four examples of enterprise problems addressed through platform modernization, process redesign, cloud delivery and governance.</p>
+        </div>
+        <div class="outcomes">
+          <article class="outcome">
+            <div class="outcome-type">Enterprise application modernization · Rakuten</div>
+            <h3>SpaceStudio</h3>
+            <p>Replaced a high-cost licensed facility-management solution with an internally developed 2D platform, improving control over the application and its operating model.</p>
+            <div class="outcome-result"><strong>¥31.78M</strong> annual operating expense savings</div>
+          </article>
+          <article class="outcome">
+            <div class="outcome-type">Process automation · Rakuten</div>
+            <h3>EnrollMe</h3>
+            <p>Redesigned the employee event-creation workflow through an internal application, removing manual coordination and reducing end-to-end turnaround.</p>
+            <div class="outcome-result"><strong>5.5 days → 30 minutes</strong> · approx. ¥5.22M projected annual cost reduction</div>
+          </article>
+          <article class="outcome">
+            <div class="outcome-type">Cloud transformation · Asurion Japan</div>
+            <h3>Project Horizon</h3>
+            <p>Directed a legacy-to-AWS transformation for an insurance technology platform supporting digital services for two major Japanese telecom operators. Coordinated delivery across Japan, India and the Philippines.</p>
+            <div class="outcome-result"><strong>3,000+ concurrent users</strong> · zero-downtime transition</div>
+          </article>
+          <article class="outcome">
+            <div class="outcome-type">Security governance · Wells Fargo</div>
+            <h3>IT Products Security Compliance CoE</h3>
+            <p>Centralized vulnerability management and security governance across a global software portfolio, supported by an automated compliance process for audit readiness.</p>
+            <div class="outcome-result"><strong>85%</strong> less manual processing · <strong>90%</strong> audit accuracy</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="credentials">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Credentials &amp; education</p>
+          <h2>Professional foundation.</h2>
+        </div>
+        <div class="credentials">
+          <div class="credential-block">
+            <h3>Certifications</h3>
+            <p>PMP® | PRINCE2® | Agile Scrum Master (ASM®)</p>
+            <p>ITIL® | Six Sigma Green Belt 6σ®</p>
+            <p>Robotoic Process Automation | Digital Marketing & Strategy | MCP</p>
+          </div>
+          <div class="credential-block">
+            <h3>Education &amp; languages</h3>
+            <p><strong>M.S.</strong> in Global Information and Telecommunication Studies, Waseda University, Tokyo, Japan.</p>
+            <p><strong>English:</strong> Native-level proficiency</p>
+            <p><strong>Japanese:</strong> Functional working proficiency</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <p class="section-kicker">Contact</p>
+            <h2>Discuss an enterprise technology mandate.</h2>
+            <p>For executive opportunities and professional enquiries, connect by email or LinkedIn.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:avdnanjp@gmail.com" id="contact-email">Email ↗</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" id="contact-linkedin">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Aravindh Narayanan · Tokyo, Japan</span>
+      <div class="footer-links">
+        <a href="mailto:avdnanjp@gmail.com" id="footer-email">Email</a>
+        <a href="https://www.linkedin.com/in/aravindhnarayanan/" target="_blank" rel="noopener noreferrer" id="footer-linkedin">LinkedIn</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
     </div>
+  </footer>
 
-    <footer class="text-center py-8 text-gray-500 text-xs uppercase tracking-widest no-print dark:text-darkSub">
-        Aravindh Narayanan &copy; 2026 | Tokyo, Japan
-    </footer>
+  <script>
+    // Theme toggle: Clarity is the light theme; Enterprise is the dark theme.
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+      var label = document.getElementById('theme-label');
+      var savedTheme = null;
+      try { savedTheme = localStorage.getItem('aravindh-site-theme'); } catch (e) {}
+      var initialTheme = savedTheme === 'enterprise' ? 'enterprise' : 'clarity';
 
-    <script>
-        // Smooth scrolling anchor logic
-        function scrollToProfile() {
-            document.getElementById('profile-content').scrollIntoView({ behavior: 'smooth' });
-            gtag('event', 'scroll_to_dossier', { 'event_category': 'engagement', 'event_label': 'Hero Anchor Used' });
-        }
+      function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        var isEnterprise = theme === 'enterprise';
+        label.textContent = isEnterprise ? 'Clarity' : 'Enterprise';
+        toggle.setAttribute('aria-pressed', isEnterprise ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isEnterprise ? 'Switch to Clarity light theme' : 'Switch to Enterprise dark theme');
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) themeMeta.setAttribute('content', isEnterprise ? '#0c1420' : '#f4f6f8');
+      }
+      applyTheme(initialTheme);
+      // THEME TOGGLE EVENT
+      // Record the theme the visitor switches FROM and the theme they switch TO.
+      toggle.addEventListener('click', function () {
+        var currentTheme = root.getAttribute('data-theme');
+        var nextTheme = currentTheme === 'enterprise' ? 'clarity' : 'enterprise';
 
-        // Dark/Light toggle system
-        function toggleTheme() {
-            const html = document.documentElement;
-            const icon = document.getElementById('theme-icon');
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                icon.classList.replace('fa-sun', 'fa-moon');
-                icon.classList.replace('text-yellow-500', 'text-brandBlue');
-            } else {
-                html.classList.add('dark');
-                icon.classList.replace('fa-moon', 'fa-sun');
-                icon.classList.replace('text-brandBlue', 'text-yellow-500');
-            }
-        }
+        applyTheme(nextTheme);
 
-        // GOOGLE ANALYTICS EVENT TRACKING
-        document.addEventListener('DOMContentLoaded', function() {
-            const trackEvent = (id, name, cat, label) => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('click', () => gtag('event', name, { 'event_category': cat, 'event_label': label }));
-            };
-
-            trackEvent('download-btn', 'download_pdf', 'engagement', 'Resume Downloaded');
-            trackEvent('print-btn', 'print_page', 'engagement', 'Profile Printed');
-            trackEvent('toggle-theme-btn', 'toggle_theme', 'interface', 'Theme Toggled');
-            
-            trackEvent('header-email-link', 'header_email_click', 'contact', 'Header Email link Clicked');
-            trackEvent('header-linkedin-link', 'header_linkedin_click', 'contact', 'Header LinkedIn Link Opened');
-            trackEvent('send-message-btn', 'send_message_click', 'contact', 'Popup Send Email Opened');
+        // GA4 event: theme_toggle
+        trackEvent('theme_toggle', {
+          from_theme: currentTheme,
+          to_theme: nextTheme
         });
-        
-        // Popup activation rule
-        window.onload = function() {
-            setTimeout(function() {
-                const popup = document.getElementById('thank-you-popup');
-                if (popup) {
-                    popup.classList.remove('translate-y-32', 'opacity-0');
-                    popup.classList.add('translate-y-0', 'opacity-100');
-                }
-            }, 2000);
-        };
 
-        function closePopup() {
-            const popup = document.getElementById('thank-you-popup');
-            if (popup) {
-                popup.classList.add('opacity-0');
-                setTimeout(() => popup.remove(), 500);
-            }
-        }
-    </script>
+        // Remember the visitor's theme choice for their next visit.
+        try { localStorage.setItem('aravindh-site-theme', nextTheme); } catch (e) {}
+      });
+    })();
+
+    // Keep the copyright year current.
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ============================================================
+    // GOOGLE ANALYTICS 4 — V2.0 EVENT TRACKING
+    // One event name per visitor action.
+    // The "placement" parameter tells us where the action happened.
+    // ============================================================
+
+    // Shared helper: sends an event to GA4 when the gtag library is ready.
+    function trackEvent(eventName, eventParameters) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, eventParameters || {});
+      }
+    }
+
+    // ------------------------------------------------------------
+    // 1. CV DOWNLOAD
+    // Event: download_cv
+    // Locations: navigation button and hero button.
+    // Parameters distinguish the location and visible button label.
+    // ------------------------------------------------------------
+    document.querySelectorAll('#nav-cv-download, #hero-cv-download').forEach(function(link) {
+      link.addEventListener('click', function() {
+        trackEvent('download_cv', {
+          placement: link.id === 'nav-cv-download' ? 'nav' : 'hero',
+          button_label: link.textContent.trim().replace(/\s+/g, ' '),
+          file_name: 'Aravindh_Narayanan_Executive_Profile.pdf'
+        });
+      });
+    });
+
+    // ------------------------------------------------------------
+    // 2. EMAIL LINK CLICKS
+    // Event: email_click
+    // Locations: hero, contact section and footer.
+    // ------------------------------------------------------------
+    document.querySelectorAll('#hero-email, #contact-email, #footer-email').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var placement = link.id.replace('-email', '');
+        trackEvent('email_click', {
+          placement: placement
+        });
+      });
+    });
+
+    // ------------------------------------------------------------
+    // 3. LINKEDIN PROFILE CLICKS
+    // Event: linkedin_click
+    // Locations: hero, contact section and footer.
+    // ------------------------------------------------------------
+    document.querySelectorAll('#hero-linkedin, #contact-linkedin, #footer-linkedin').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var placement = link.id.replace('-linkedin', '');
+        trackEvent('linkedin_click', {
+          placement: placement
+        });
+      });
+    });
+
+    // ------------------------------------------------------------
+    // 4. EXPLORE PROFILE
+    // Event: explore_profile
+    // Tracks the visitor clicking the hero CTA to reach the profile.
+    // ------------------------------------------------------------
+    document.getElementById('explore-profile').addEventListener('click', function() {
+      trackEvent('explore_profile', {
+        destination: 'profile'
+      });
+    });
+
+    // ------------------------------------------------------------
+    // 5. THEME TOGGLE
+    // Event: theme_toggle
+    // Listener is attached above, inside the theme-toggle function,
+    // so it can capture both the previous and selected theme.
+    // ------------------------------------------------------------
+
+    // END OF GOOGLE ANALYTICS 4 V2.0 EVENT TRACKING
+    // ============================================================
+  </script>
 </body>
 </html>
